@@ -1,8 +1,8 @@
 var templateservicemod = angular.module('templateservicemod', []);
 templateservicemod.service('TemplateService', function() {
-    this.title = "Home";
-    this.meta = "Google";
-    this.metadesc = "Home";
+    this.title = "Love Lie Lust";
+    this.meta = "Love Lie Lust";
+    this.metadesc = "Love Lie Lust";
 
     var d = new Date();
     this.year = d.getFullYear();
@@ -23,7 +23,7 @@ templateservicemod.service('TemplateService', function() {
         data.content = "views/content/" + page + ".html";
         return data;
     };
-    
+
     this.init();
 
 });

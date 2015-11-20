@@ -1,9 +1,72 @@
 /*Start writing sass here*/
-@import "../bourbon/bourbon";
-@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/fontawesome/css/font-awesome.min.css";
- body {
+
+/* Brand colors */
+$brand-red: #ff0f0f;
+$brand-blue: #0cceff;
+$brand-green-neon: #2bc900;
+$brand-pink: #f02b67;
+$brand-green: #0fff3c;
+$brand-yellow: #ffae00;
+$brand-gray: #323232;
+
+$brand-gray-lighter: #606060;
+$gray-base: #000 !default;
+
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$brand-primary: #1aa3eb !default;
+$brand-success: #1aeb46 !default;
+$brand-warning: #ebb21a !default;
+$brand-danger: #eb2e1a !default;
+$brand-info: #1ad0eb !default;
+$facebook: #3a579d !default;
+$google: #dd4d3c !default;
+$twitter: #49c8f5 !default;
+$body-bg: #fff !default;
+$text-color: $gray !default;
+$link-color: $gray !default;
+$link-hover-color: $gray-base !default;
+$link-hover-decoration: none !default;
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Lato", Georgia, "Times New Roman", Times, serif !default;
+$border-radius-base: 0 !default;
+$border-radius-large: 0 !default;
+$border-radius-small: 0 !default;
+$menu-height: 65px !default;
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+.brand-red {
+  color: $brand-red;
+}
+.brand-blue {
+  color: $brand-blue;
+}
+.brand-green-neon {
+  color: $brand-green-neon;
+}
+.brand-pink {
+  color: $brand-pink;
+}
+.brand-green {
+  color: $brand-green;
+}
+.brand-yellow {
+  color: $brand-yellow;
+}
+.brand-gray {
+  color: $brand-gray;
+}
+.brand-gray-lighter {
+  color: $brand-gray-lighter;
+}
+body {
   padding-top: 70px;
 }
 img.loading {
@@ -14,8 +77,8 @@ img.loading {
 }
 img {
   opacity: 0;
-  //    .transition(all 1s ease);
 
+  //    .transition(all 1s ease);
 }
 img.doneLoading {
   opacity: 1;
@@ -24,5 +87,5 @@ nav li:hover .dropdown-menu {
   display: block;
 }
 h1 {
-    color:pink;
+  color: pink;
 }
