@@ -1,11 +1,11 @@
 {
-  "name": "AngularFrameworkFrontend",
+  "name": "LoveLieLust",
   "version": "0.0.1",
-  "homepage": "https://www.wohlig.com",
+  "homepage": "https://www.ting.in",
   "authors": [
     "tushar@wohlig.com"
   ],
-  "description": "Angular Framework Frontend",
+  "description": "Love Lie Lust",
   "license": "MIT",
   "ignore": [
     "**/.*",
