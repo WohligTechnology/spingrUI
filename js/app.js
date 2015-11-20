@@ -7,7 +7,7 @@ var firstapp = angular.module('firstapp', [
 ]);
 
 firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
-    
+
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
 
@@ -19,10 +19,22 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'HomeCtrl'
     })
 
-    .state('feature', {
-        url: "/feature",
+    .state('love', {
+        url: "/love",
         templateUrl: "views/template.html",
-        controller: 'FeatureCtrl'
+        controller: 'LoveCtrl'
+    })
+
+    .state('lie', {
+        url: "/lie",
+        templateUrl: "views/template.html",
+        controller: 'LieCtrl'
+    })
+
+    .state('lust', {
+        url: "/lust",
+        templateUrl: "views/template.html",
+        controller: 'LustCtrl'
     })
 
     $urlRouterProvider.otherwise("/home");

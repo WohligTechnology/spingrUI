@@ -15,7 +15,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   ];
 })
 
-.controller('FeatureCtrl', function($scope, TemplateService) {
+.controller('LoveCtrl', function($scope, TemplateService) {
+  $scope.template = TemplateService;
+})
+
+.controller('LieCtrl', function($scope, TemplateService) {
+  $scope.template = TemplateService;
+})
+
+.controller('LustCtrl', function($scope, TemplateService) {
   $scope.template = TemplateService;
 })
 .controller('headerctrl', function($scope, TemplateService) {
