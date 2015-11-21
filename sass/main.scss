@@ -13,10 +13,8 @@ $brand-pink: #f02b67;
 $brand-green: #0fff3c;
 $brand-yellow: #ffae00;
 $brand-gray: #323232;
-
 $brand-gray-lighter: #606060;
 $gray-base: #000 !default;
-
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
@@ -42,6 +40,9 @@ $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
 $menu-height: 65px !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+.brand-white {
+  color: $body-bg;
+}
 .brand-red {
   color: $brand-red;
 }
@@ -66,8 +67,37 @@ $menu-height: 65px !default;
 .brand-gray-lighter {
   color: $brand-gray-lighter;
 }
+.brand-red-bg {
+  background-color: $brand-red;
+}
+.brand-blue-bg {
+  background-color: $brand-blue;
+}
+.brand-green-neon-bg {
+  background-color: $brand-green-neon;
+}
+.brand-pink-bg {
+  background-color: $brand-pink;
+}
+.brand-green-bg {
+  background-color: $brand-green;
+}
+.brand-yellow-bg {
+  background-color: $brand-yellow;
+}
+.brand-gray-bg {
+  background-color: $brand-gray;
+}
+.brand-gray-lighter-bg {
+  background-color: $brand-gray-lighter;
+}
+.font-size-large {
+  font-size: ceil(($font-size-base * 1.2));
+}
+
 body {
-  padding-top: 70px;
+
+  //padding-top: 70px;
 }
 img.loading {
   text-align: center;
@@ -88,4 +118,39 @@ nav li:hover .dropdown-menu {
 }
 h1 {
   color: pink;
+}
+
+// Footer
+footer {
+  padding: 40px 0;
+  text-align: center;
+
+  a {
+    color: $body-bg;
+    &:hover {
+      color: $gray-light;
+    }
+  }
+
+  .footer-links {
+    ul {
+      margin: 40px 0px;
+      padding: 20px 0;
+      border-top: 1px solid $brand-gray-lighter;
+      border-bottom: 1px solid $brand-gray-lighter;
+    }
+  }
+
+  .footer-text {
+    margin: 40px 0;
+  }
+
+  .social-links { ul { li {
+    a {
+      padding: 10px 13px;
+      background: $brand-gray-lighter;
+      border-radius: 50%;
+    } } }
+  }
+
 }
