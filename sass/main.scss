@@ -94,7 +94,6 @@ $menu-height: 65px !default;
 .font-size-large {
   font-size: ceil(($font-size-base * 1.2));
 }
-
 body {
 
   //padding-top: 70px;
@@ -124,42 +123,44 @@ h1 {
 .goops {
   background-image: url(../img/goops.jpg);
 }
-
 .mobile-section {
-  background-image: url(../img/mobile.jpg)
+  background-image: url(../img/mobile.jpg);
+}
+.love-header {
+  height: 100px;
+  background-image: url(../img/love.jpg);
 }
 
 // Footer
 footer {
   padding: 40px 0;
   text-align: center;
-
   a {
     color: $body-bg;
     &:hover {
       color: $gray-light;
     }
   }
-
   .footer-links {
     ul {
-      margin: 40px 0px;
+      margin: 40px 0;
       padding: 20px 0;
       border-top: 1px solid $brand-gray-lighter;
       border-bottom: 1px solid $brand-gray-lighter;
     }
   }
-
   .footer-text {
     margin: 40px 0;
   }
-
-  .social-links { ul { li {
-    a {
-      padding: 10px 13px;
-      background: $brand-gray-lighter;
-      border-radius: 50%;
-    } } }
+  .social-links {
+    ul {
+      li {
+        a {
+          padding: 10px 13px;
+          background: $brand-gray-lighter;
+          border-radius: 50%;
+        }
+      }
+    }
   }
-
 }
