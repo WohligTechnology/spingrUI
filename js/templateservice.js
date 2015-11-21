@@ -13,10 +13,6 @@ templateservicemod.service('TemplateService', function() {
         this.menu = "views/menu.html";
         this.slider = "views/slider.html";
         this.content = "views/content/content.html";
-        this.home = "views/content/home.html";
-        this.love = "views/content/love.html";
-        this.lie = "views/content/lie.html";
-        this.lust = "views/content/lust.html";
         this.footermenu = "views/footermenu.html";
         this.footer = "views/footer.html";
     };

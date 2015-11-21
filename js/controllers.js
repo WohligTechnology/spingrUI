@@ -15,7 +15,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   ];
 })
 
-.controller('LoveCtrl', function($scope, TemplateService) {
+.controller('LoveCtrl', function($scope, TemplateService, NavigationService) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("love");
   $scope.menutitle = NavigationService.makeactive("Love");
@@ -23,7 +23,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 })
 
-.controller('LieCtrl', function($scope, TemplateService) {
+.controller('LieCtrl', function($scope, TemplateService, NavigationService) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("lie");
   $scope.menutitle = NavigationService.makeactive("Lie");
@@ -31,7 +31,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 })
 
-.controller('LustCtrl', function($scope, TemplateService) {
+.controller('LustCtrl', function($scope, TemplateService, NavigationService) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("lust");
   $scope.menutitle = NavigationService.makeactive("Lust");
