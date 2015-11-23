@@ -23,6 +23,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 })
 
+.controller('LoveDetailCtrl', function($scope, TemplateService, NavigationService) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("lovedetail");
+  $scope.menutitle = NavigationService.makeactive("Love Detail");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
+
 .controller('LieCtrl', function($scope, TemplateService, NavigationService) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("lie");

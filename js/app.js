@@ -25,6 +25,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'LoveCtrl'
     })
 
+    .state('lovedetail', {
+        url: "/lovedetail",
+        templateUrl: "views/template.html",
+        controller: 'LoveDetailCtrl'
+    })
+
     .state('lie', {
         url: "/lie",
         templateUrl: "views/template.html",
