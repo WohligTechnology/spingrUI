@@ -205,26 +205,32 @@ header {
   padding: 50px 0;
   margin-top: -100px;
   position: relative;
-  h1 {
-    margin-bottom: 30px;
-    color: $gray-base;
-    text-align: center;
-    font-size: 2em;
-  }
-  p {
-    text-align: left;
-  }
-  button {
-    padding: 5px 15px;
-    @extend .brand-gray-bg;
-    @extend .brand-white;
-    border: none;
+  .inner-queries {
+    padding: 0px 10px;
+    h1 {
+      margin-bottom: 30px;
+      color: $gray-base;
+      text-align: center;
+      font-size: 2em;
+    }
+    p {
+      text-align: left;
+    }
+    button {
+      padding: 5px 15px;
+      @extend .brand-gray-bg;
+      @extend .brand-white;
+      border: none;
+    }
   }
 }
 .mobile-section {
   background-image: url(../img/mobile.jpg);
   .mobile-image {
     margin-top: $space-100;
+    img {
+      @extend .max-width-height-100;
+    }
   }
   .mobile-text {
     margin-left: 20px;
