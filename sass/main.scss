@@ -153,9 +153,16 @@ $space-100: 100px;
 .clearfix {
   overflow: auto;
 }
+.social-icn {
+  background: $brand-gray-lighter;
+  color: white;
+  border-radius: 50%;
+}
 body {
-
   //padding-top: 70px;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 auto;
 }
 img.loading {
   text-align: center;
@@ -165,7 +172,6 @@ img.loading {
 }
 img {
   opacity: 0;
-
   //    .transition(all 1s ease);
 }
 img.doneLoading {
@@ -331,7 +337,7 @@ header {
   background-size: cover;
   background-position: center;
 }
-.love-main {
+.love-main, .love-detail-main {
   margin-top: -$space-100 / 2;
   padding: 50px 0 50px 50px;
   .post-elements {
@@ -369,7 +375,6 @@ header {
     text-align: center;
     border: 5px solid $gray-base;
     h1 {
-      margin: 0;
       font-size: 28px;
     }
     ul {
@@ -386,6 +391,21 @@ header {
             margin: 5px 0 0 -85px;
             font-weight: 600;
           }
+        }
+      }
+    }
+  }
+}
+
+// Love Detail
+.love-detail-main {
+  .share-links {
+    ul {
+      li {
+        a {
+          padding: 3px 5px;
+          font-size: 11px;
+          @extend .social-icn;
         }
       }
     }
@@ -435,9 +455,8 @@ footer {
       li {
         a {
           padding: 7px 10px;
-          background: $brand-gray-lighter;
-          border-radius: 50%;
           font-size: 20px;
+          @extend .social-icn;
         }
       }
     }
