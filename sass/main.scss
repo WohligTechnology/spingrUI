@@ -18,35 +18,28 @@ $brand-yellow: #ffae00;
 $brand-gray: #323232;
 $brand-gray-lighter: #606060;
 $brand-gray-darker: #232323;
-
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
-
 $facebook: #3a579d !default;
 $google: #dd4d3c !default;
 $twitter: #49c8f5 !default;
-
 $body-bg: #fff !default;
 $text-color: $gray !default;
 $link-color: $gray !default;
 $link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
-
 $font-family-sans-serif: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "Dosis", Georgia, "Times New Roman", Times, serif !default;
-
 $border-radius-base: 0 !default;
 $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
 $menu-height: 65px !default;
 $space-100: 100px;
-
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 .brand-white {
   color: $body-bg;
 }
@@ -110,7 +103,6 @@ $space-100: 100px;
 .brand-gray-darker-bg {
   background-color: $brand-gray-darker;
 }
-
 .btn {
   font-family: "Roboto";
   @include transition(all 300ms ease);
@@ -130,7 +122,6 @@ $space-100: 100px;
 .btn-red {
   @include button-variant(white, $brand-red, $brand-red);
 }
-
 .border-blue:after {
   border-color: $brand-blue;
 }
@@ -163,6 +154,7 @@ $space-100: 100px;
   overflow: auto;
 }
 body {
+
   //padding-top: 70px;
 }
 img.loading {
@@ -179,6 +171,9 @@ img {
 img.doneLoading {
   opacity: 1;
 }
+ul {
+  list-style: none;
+}
 nav li:hover .dropdown-menu {
   display: block;
 }
@@ -189,7 +184,7 @@ header {
   position: absolute;
   top: $space-100 / 1.5;
   .menu-icons {
-    margin: 5px -2px -2px -2px;
+    margin: 5px -2px -2px;
     padding: 0;
     height: 20px;
     img {
@@ -241,7 +236,7 @@ header {
 }
 .goops-detail {
   padding: 25px 45px;
-  margin: 0 0 5px 0;
+  margin: 0 0 5px;
   text-align: left;
   font-size: 16px;
   border-right: 2px solid $brand-blue-darker;
@@ -254,7 +249,7 @@ header {
   margin-top: -100px;
   position: relative;
   .inner-queries {
-    padding: 0px 10px;
+    padding: 0 10px;
     h1 {
       margin-bottom: 20px;
       color: $gray-dark;
@@ -265,7 +260,6 @@ header {
       font-weight: 300;
       padding-bottom: 10px;
       letter-spacing: 1px;
-
       &:after {
         content: "";
         border-bottom-width: 2px;
@@ -332,10 +326,70 @@ header {
 // Love
 .love-header {
   width: 100%;
-  height: $space-100 * 2;
+  height: $space-100 * 3;
   background-image: url(../img/love.jpg);
   background-size: cover;
   background-position: center;
+}
+.love-main {
+  margin-top: -$space-100 / 2;
+  padding: 50px 0 50px 50px;
+  .post-elements {
+    height: 120px;
+    overflow: hidden;
+    .post-image {
+      width: 100%;
+      height: 100px;
+      img {
+        @extend .max-width-height-100;
+      }
+    }
+    .post-details {
+      width: 100%;
+      letter-spacing: 1px;
+      h3 {
+        margin: 4px 0 0 0;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 12px;
+      }
+      p + p {
+        margin: -5px 0 0;
+        font-weight: 600;
+      }
+    }
+  }
+  .most-viewed {
+    padding: 40px 0;
+    position: relative;
+    left: 30px;
+    text-align: center;
+    border: 5px solid $gray-base;
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    ul {
+      padding: 0;
+      li {
+        margin-top: 40px;
+        .mv-elements {
+          margin-left: -20px;
+          height: $space-100;
+          img {
+            @extend .max-width-height-100;
+          }
+          p {
+            margin: 5px 0 0 -85px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Footer
@@ -348,13 +402,14 @@ footer {
       color: $gray-light;
     }
   }
-  .footer-menus, .footer-links {
+  .footer-menus,
+  .footer-links {
     li {
       margin-right: 20px;
       letter-spacing: 1px;
     }
     li:last-child {
-      margin: 0px;
+      margin: 0;
     }
   }
   .footer-links {
