@@ -242,6 +242,15 @@ header {
             @extend .max-width-height-100;
         }
     }
+    .hamburger {
+        .icon-bar {
+            width: 26px;
+            height: 3px;
+            display: block;
+            margin-top: 5px;
+            background-color: #fff;
+        }
+    }
 }
 // Home
 .slider > img {
@@ -593,11 +602,11 @@ footer {
                     line-height: 40px;
                     display: inline-block;
                     font-size: 20px;
-                    @extend .social-icn; 
+                    @extend .social-icn;
                     @include transition(all 400ms ease-in-out);
                     &:hover {
                         color: #fff;
-                       @include transition(all 400ms ease-in-out); 
+                        @include transition(all 400ms ease-in-out);
                     }
                 }
                 .fb {
