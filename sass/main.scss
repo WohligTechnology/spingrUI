@@ -1,6 +1,6 @@
 /*Start writing sass here*/
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -17,6 +17,7 @@ $brand-green: #0fff3c;
 $brand-yellow: #ffae00;
 $brand-gray: #323232;
 $brand-gray-lighter: #606060;
+$brand-gray-lighter-2: #969696;
 $brand-gray-darker: #232323;
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
@@ -70,6 +71,18 @@ $space-100: 100px;
 .brand-gray-lighter {
   color: $brand-gray-lighter;
 }
+.brand-gray-lighter-2 {
+  color: $brand-gray-lighter-2;
+}
+.gray-base {
+  color: $gray-base;
+}
+.gray-dark {
+  color: $gray-dark;
+}
+.gray-lighter {
+  color: $gray-lighter;
+}
 .gray-lighter-bg {
   background-color: $gray-lighter;
 }
@@ -97,6 +110,9 @@ $space-100: 100px;
 .brand-gray-bg {
   background-color: $brand-gray;
 }
+.brand-gray-lighter-2-bg {
+  background-color: $brand-gray-lighter-2;
+}
 .brand-gray-lighter-bg {
   background-color: $brand-gray-lighter;
 }
@@ -104,11 +120,17 @@ $space-100: 100px;
   background-color: $brand-gray-darker;
 }
 .btn {
+  height: 30px;
   font-family: "Roboto";
+  font-weight: 300;
   @include transition(all 300ms ease);
   outline: 0 !important;
 }
+.btn-more {
+  width: 100px;
+}
 .btn-null {
+  font-style: italic;
   background-color: transparent;
   border: none;
   outline: 0 !important;
@@ -121,6 +143,9 @@ $space-100: 100px;
 }
 .btn-red {
   @include button-variant(white, $brand-red, $brand-red);
+}
+.btn-pink {
+  @include button-variant(white, $brand-pink, $brand-pink);
 }
 .border-blue:after {
   border-color: $brand-blue;
@@ -158,10 +183,21 @@ $space-100: 100px;
   color: white;
   border-radius: 50%;
 }
+.social-icn-2 {
+  background: $brand-gray-lighter-2;
+  color: white;
+  border-radius: 50%;
+}
 body {
   //padding-top: 70px;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0 auto;
 }
 img.loading {
@@ -172,6 +208,7 @@ img.loading {
 }
 img {
   opacity: 0;
+
   //    .transition(all 1s ease);
 }
 img.doneLoading {
@@ -188,7 +225,7 @@ nav li:hover .dropdown-menu {
 header {
   width: 100%;
   position: absolute;
-  top: $space-100 / 1.5;
+  top: $space-100;
   .menu-icons {
     margin: 5px -2px -2px;
     padding: 0;
@@ -204,7 +241,7 @@ header {
   position: relative;
   @extend .width-100;
   border: 20px solid $brand-gray;
-  top: 50px;
+  top: $space-100 - 20px;
   z-index: 1;
 }
 .goops {
@@ -215,7 +252,7 @@ header {
   background-position: left center;
   text-align: center;
   position: relative;
-  top: -50px;
+  top: -30px;
   z-index: auto;
 }
 .goops-text {
@@ -230,7 +267,7 @@ header {
 }
 .img-hold {
   width: $space-100 * 1.4;
-  height: 94px;
+  height: 90px;
   margin-left: -40px;
   position: relative;
   img {
@@ -241,7 +278,7 @@ header {
   }
 }
 .goops-detail {
-  padding: 25px 45px;
+  padding: 20px 45px 25px 45px;
   margin: 0 0 5px;
   text-align: left;
   font-size: 16px;
@@ -251,7 +288,7 @@ header {
   }
 }
 .queries {
-  padding: 50px 0;
+  padding: 80px 0 50px 0;
   margin-top: -100px;
   position: relative;
   .inner-queries {
@@ -264,7 +301,7 @@ header {
       position: relative;
       font-size: 35px;
       font-weight: 300;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
       letter-spacing: 1px;
       &:after {
         content: "";
@@ -277,12 +314,14 @@ header {
       }
     }
     .slider {
-      height: 500px;
+      height: $space-100 * 5;
       overflow: scroll;
+      overflow-x: hidden;
       padding-right: 10px;
-      margin-bottom: 20px;
-      .elements {
+      margin-bottom: 40px;
+      .elements, .elements-2 {
         margin-bottom: 15px;
+        letter-spacing: 1px;
         h2 {
           font-weight: 600;
           font-style: italic;
@@ -291,10 +330,16 @@ header {
           text-align: left;
         }
         .extra {
+          margin-top: 5px;
           font-size: 12px;
         }
       }
-      .elements + .elements {
+      .elements-2 {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .elements + .elements, .elements-2 + .elements-2 {
+        padding-top: 10px;
         border-top: 1px solid $gray-light;
       }
     }
@@ -332,17 +377,17 @@ header {
 // Love
 .love-header {
   width: 100%;
-  height: $space-100 * 3;
+  height: $space-100 * 3.5;
   background-image: url(../img/love.jpg);
   background-size: cover;
   background-position: center;
 }
-.love-main, .love-detail-main {
+.love-main,
+.love-detail-main {
   margin-top: -$space-100 / 2;
   padding: 50px 0 50px 50px;
   .post-elements {
-    height: 120px;
-    overflow: hidden;
+    height: 130px;
     .post-image {
       width: 100%;
       height: 100px;
@@ -352,9 +397,10 @@ header {
     }
     .post-details {
       width: 100%;
+      line-height: 14px;
       letter-spacing: 1px;
       h3 {
-        margin: 4px 0 0 0;
+        margin: 4px 0 0;
         font-size: 20px;
         font-weight: 600;
         letter-spacing: 2px;
@@ -363,18 +409,22 @@ header {
         font-size: 12px;
       }
       p + p {
-        margin: -5px 0 0;
+        margin: 10px 0 0 0;
         font-weight: 600;
       }
     }
   }
-  .most-viewed {
+  .post-elements:last-child {
+    height: 100%;
+  }
+  .most-viewed, .most-viewed-2 {
     padding: 40px 0;
     position: relative;
     left: 30px;
     text-align: center;
     border: 5px solid $gray-base;
     h1 {
+      margin-left: -20px;
       font-size: 28px;
     }
     ul {
@@ -395,17 +445,80 @@ header {
       }
     }
   }
+  .most-viewed-2 {
+    padding: 20px 0 30px 0;
+    border-color: $brand-pink;
+    h1 {
+      margin: 0 0 -20px -20px;
+    }
+  }
 }
 
 // Love Detail
 .love-detail-main {
-  .share-links {
+  .blog-time {
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .shares {
+    margin: 20px 0 0 12px;
+    h2 {
+      font-size: 36px;
+    }
+    p {
+      margin-left: 5px;
+      font-weight: 500;
+    }
+  }
+  .share-links, .share-links-2 {
     ul {
       li {
+        span {
+          letter-spacing: 1px;
+        }
         a {
           padding: 3px 5px;
-          font-size: 11px;
-          @extend .social-icn;
+          @extend .social-icn-2;
+        }
+      }
+    }
+  }
+  .share-links {
+    margin-top: -10px;
+  }
+  .love-blog-image {
+    img {
+      width: 90%;
+      height: 100%;
+      margin: 10px 0;
+    }
+  }
+  .love-blog-detail {
+    padding-bottom: $space-100 / 4;
+    font-weight: 500;
+    border-bottom: 2px solid $gray-base;
+  }
+  .other-links {
+    margin-top: 40px;
+    .share-links-2 {
+      display: table;
+      @extend .trasform-50;
+    }
+    .other-buttons {
+      display: table;
+      @extend .trasform-50;
+      ul {
+        li {
+          button {
+            width: 133px;
+            .i-left {
+              font-size: 12px;
+              margin-right: 10px;
+            }
+            .i-right {
+              margin-left: 10px;
+            }
+          }
         }
       }
     }
