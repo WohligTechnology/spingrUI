@@ -1,18 +1,29 @@
-<header>
+<header ng-controller="headerctrl">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="">
                 <div class="slide-menu">
                     <!--
           <div>
             <i class="fa fa-bars brand-white"></i>
           </div>
 -->
-                    <div class="hamburger">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <div class="hamburger" ng-click="getnav();">
+                        <span id="icon1" class="icon-bar"></span>
+                        <span id="icon2" class="icon-bar"></span>
+                        <span id="icon3" class="icon-bar"></span>
                     </div>
+                    <nav class=" menu {{shownav}}">
+                        <ul>
+                            <li><a href="#">Love</a></li>
+                            <li><a href="#">Lie</a></li>
+                            <li><a href="#">Lust</a></li>
+                            <li><a href="#">Confession</a></li>
+                            <li><a href="#">Ask The Sexpert</a></li>
+                            <li><a href="#">Love Queries</a></li>
+                            <li><a href="#">Goops</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="menu-links">
                     <ul class="list-inline">

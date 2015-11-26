@@ -19,6 +19,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'HomeCtrl'
     })
 
+    .state('slider', {
+        url: "/slider",
+        templateUrl: "views/template.html",
+        controller: 'SliderCtrl'
+    })
+
     .state('love', {
         url: "/love",
         templateUrl: "views/template.html",
