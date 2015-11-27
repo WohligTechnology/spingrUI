@@ -701,8 +701,47 @@ header {
                     letter-spacing: 1px;
                 }
                 a {
-                    padding: 3px 5px;
-                    @extend .social-icn-2;
+                  width: 25px;
+                  height: 25px;
+                  display: inline-block;
+                  line-height: 25px;
+                  text-align: center;
+                  @extend .social-icn-2;
+                }
+                .fb {
+                    &:hover {
+                        background-color: #3b5998;
+                    }
+                }
+                .twi {
+                    &:hover {
+                        background-color: #00aced;
+                    }
+                }
+                .insta {
+                    &:hover {
+                        background-color: #125688;
+                    }
+                }
+                .gp {
+                    &:hover {
+                        background-color: #dd4b39;
+                    }
+                }
+                .pin {
+                    &:hover {
+                        background-color: #cb2027;
+                    }
+                }
+                .you {
+                    &:hover {
+                        background-color: #bb0000;
+                    }
+                }
+                .env {
+                    &:hover {
+                        background-color: #000000;
+                    }
                 }
             }
         }
