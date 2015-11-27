@@ -251,7 +251,7 @@ nav li:hover .dropdown-menu {
             flex: 1;
             position: relative;
             &:hover .content-hover {
-                opacity: 1;
+                opacity: 0;
                 @include transition(all 300ms ease-in-out);
             }
         }
@@ -310,6 +310,19 @@ nav li:hover .dropdown-menu {
             .lust-text-2 {
                 @extend .love-text-2;
             }
+        }
+        .love-back {
+            height: 380px;
+            background: url('../img/love.jpg') no-repeat;
+            background-size: cover;
+        }
+        .lie-back {
+            @extend .love-back;
+            background: url('../img/lie.jpg') no-repeat;
+        }
+        .lust-back {
+            @extend .love-back;
+            background: url('../img/lust.jpg') no-repeat;
         }
         .content-hover {
             opacity: 0;
