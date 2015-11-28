@@ -37,6 +37,47 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Love");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+    $scope.loveblog = [
+        {
+            img: "img/love-pic.jpg",
+            title: "Love for Two, Please!",
+            date: "March 13, 2015 by Anonymous",
+            descp: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+    },
+        {
+            img: "img/kiss-pic.jpg",
+            title: "Love for Two, Please!",
+            date: "March 13, 2015 by Anonymous",
+            descp: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+        },
+        {
+            img: "img/love-pic.jpg",
+            title: "Love for Two, Please!",
+            date: "March 13, 2015 by Anonymous",
+            descp: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+    },
+
+        {
+            img: "img/kiss-pic.jpg",
+            title: "Love for Two, Please!",
+            date: "March 13, 2015 by Anonymous",
+            descp: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+        },
+        {
+            img: "img/love-pic.jpg",
+            title: "Love for Two, Please!",
+            date: "March 13, 2015 by Anonymous",
+            descp: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+    },
+
+        {
+            img: "img/kiss-pic.jpg",
+            title: "Love for Two, Please!",
+            date: "March 13, 2015 by Anonymous",
+            descp: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+        }
+    ];
 })
 
 .controller('LoveDetailCtrl', function ($scope, TemplateService, NavigationService) {

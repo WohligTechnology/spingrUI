@@ -179,7 +179,7 @@ $space-100: 100px;
 }
 
 .btn-green {
-    @include button-variant(white, $brand-green, $brand-green);
+    @include button-variant(white, $brand-green-neon, $brand-green-neon);
 }
 
 .btn-red {
@@ -188,6 +188,10 @@ $space-100: 100px;
 
 .btn-pink {
     @include button-variant(white, $brand-pink, $brand-pink);
+}
+
+.btn-gray {
+    @include button-variant(white, $brand-gray, $brand-gray);
 }
 
 .border-blue:after {
@@ -199,7 +203,7 @@ $space-100: 100px;
 }
 
 .border-green:after {
-    border-color: $brand-green;
+    border-color: $brand-green-neon;
 }
 
 .font-size-large {
@@ -250,6 +254,17 @@ body {
     padding: 0 !important;
 }
 
+a {
+    @include transition(all 300ms ease-in-out);
+    &:hover {
+        text-decoration: none;
+        @include transition(all 300ms ease-in-out);
+    }
+    &:focus {
+        text-decoration: none;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -284,8 +299,14 @@ nav li:hover .dropdown-menu {
     display: block;
 }
 
+.over-lap {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
 .slide-me {
-    margin-top: 100px;
+    margin-top: 63px;
     .bg-1 {
         background-color: #1b1b1b;
     }
@@ -299,23 +320,25 @@ nav li:hover .dropdown-menu {
         display: -o-flex;
         display: flex;
         .col-flex {
+            cursor: pointer;
             -webkit-box-flex: 1;
             flex: 1;
             position: relative;
             &:hover .content-hover {
-                opacity: 0;
+                opacity: 1;
                 @include transition(all 300ms ease-in-out);
             }
         }
     }
     .slide-part {
-        min-height: 100%;
+        height: 300px;
+        padding: 30px;
         position: relative;
-        padding: 35px;
+        overflow: hidden;
         .content-holder {
             .content-1 {
                 p {
-                    font-size: 14px;
+                    font-size: 12px;
                     line-height: 20px;
                 }
             }
@@ -323,9 +346,10 @@ nav li:hover .dropdown-menu {
                 position: absolute;
                 top: 0;
                 p {
-                    font-size: 30px;
+                    font-size: 25px;
                     font-weight: 600;
-                    line-height: 35px;
+                    line-height: 30px;
+                    letter-spacing: 3px;
                     text-transform: uppercase;
                     span {
                         display: block;
@@ -335,8 +359,8 @@ nav li:hover .dropdown-menu {
             .love-text-1 {
                 width: 70%;
                 top: 20%;
-                left: 20%;
-                @include transform(translate(-20%, -20%));
+                left: 36%;
+                @include transform(translate(-36%, -20%));
             }
             .love-text-2 {
                 width: 75%;
@@ -357,14 +381,16 @@ nav li:hover .dropdown-menu {
             }
             .lust-text-1 {
                 width: 59%;
-                @extend .love-text-1;
+                top: 20%;
+                left: 30%;
+                @include transform(translate(-30%, -20%));
             }
             .lust-text-2 {
                 @extend .love-text-2;
             }
         }
         .love-back {
-            height: 310px;
+            height: 300px;
             background: url('../img/love.jpg') no-repeat;
             background-size: 100% 100%;
         }
@@ -379,6 +405,7 @@ nav li:hover .dropdown-menu {
             background-size: 100% 100%;
         }
         .content-hover {
+            padding: 30px;
             opacity: 0;
             background-color: #fff;
             position: absolute;
@@ -388,22 +415,21 @@ nav li:hover .dropdown-menu {
             right: 0;
             @include transition(all 300ms ease-in-out);
             .fifty {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                @include transform(translate(-50%,
-                -50%));
                 p.quote {
-                    margin-bottom: 15px;
                     font-size: 30px;
                     @extend .brand-pink;
                     letter-spacing: 1px;
                     word-spacing: 6px;
-                    text-transform: uppercase;
-                    text-align: center;
                     span {
                         display: block;
                     }
+                }
+                .l3-date {
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                }
+                button {
+                    margin: 50px 0;
                 }
             }
         }
@@ -436,7 +462,7 @@ header {
             margin: 3px 0;
             border-radius: 0;
             background-color: #fff;
-            @include transition(all 200ms ease-in-out);
+            @include transition(all 400ms ease-in-out);
         }
         .icon-bar:nth-child(1) {
             position: absolute;
@@ -451,14 +477,14 @@ header {
             top: 14px;
         }
         .top-bar {
-            @include transform(rotate(225deg));
+            @include transform(rotate(45deg));
             top: 7px !important;
         }
         .mid-bar {
             opacity: 0;
         }
         .down-bar {
-            @include transform(rotate(-225deg));
+            @include transform(rotate(-45deg));
             top: 7px !important;
         }
     }
@@ -479,7 +505,7 @@ header {
                 a {
                     color: #fff;
                     font-size: 27px;
-                    @include transition(all 200ms ease-in-out);
+                    @include transition(all 400ms ease-in-out);
                     &:hover {
                         color: $brand-pink;
                     }
@@ -495,12 +521,12 @@ header {
 }
 
 .menu-out {
-    @include transition(all 200ms ease-in-out);
+    @include transition(all 400ms ease-in-out);
     @include transform(translateY(-600px));
 }
 
 .menu-in {
-    @include transition(all 200ms ease-in-out);
+    @include transition(all 400ms ease-in-out);
     @include transform(translateY(0));
 }
 
@@ -514,8 +540,8 @@ header {
 }
 
 .goops {
-    padding-top: $space-100 * 2;
-    height: $space-100 * 6.4;
+    height: 500px;
+    padding-top: 140px;
     background-image: url(../img/goops.jpg);
     background-size: cover;
     background-position: left center;
@@ -561,18 +587,17 @@ header {
 }
 
 .queries {
-    padding: 80px 0 50px 0;
     margin-top: -100px;
     position: relative;
     .inner-queries {
-        padding: 0 10px;
+        padding: 60px;
         h1 {
             margin-bottom: 20px;
             color: $gray-dark;
             text-align: left;
             display: inline-block;
             position: relative;
-            font-size: 35px;
+            font-size: 32px;
             font-weight: 300;
             padding-bottom: 15px;
             letter-spacing: 1px;
@@ -603,7 +628,7 @@ header {
             height: $space-100 * 5;
             overflow: scroll;
             overflow-x: hidden;
-            padding-right: 10px;
+            padding-right: 15px;
             margin-bottom: 40px;
             .elements,
             .elements-2 {
@@ -614,6 +639,7 @@ header {
                     font-style: italic;
                 }
                 p {
+                    color: $brand-gray;
                     text-align: left;
                 }
                 .extra {
@@ -646,8 +672,8 @@ header {
         }
     }
     .mobile-text {
-        margin-left: 20px;
-        margin-top: $space-100 * 3;
+        margin-left: 10px;
+        margin-top: 260px;
         h2 {
             margin-bottom: 30px;
             font-weight: 300;
@@ -667,9 +693,8 @@ header {
 .love-header {
     width: 100%;
     height: $space-100 * 3.5;
-    background-image: url(../img/love.jpg);
+    background: url(../img/love-detail.png) no-repeat center;
     background-size: cover;
-    background-position: center;
 }
 
 .love-main,
@@ -678,29 +703,33 @@ header {
     padding: 50px 0 50px 50px;
     .post-elements {
         height: 130px;
+        margin-bottom: 10px;
         .post-image {
-            width: 100%;
+            width: 175px;
             height: 100px;
             img {
                 @extend .max-width-height-100;
+                min-width: 100%;
             }
         }
         .post-details {
             width: 100%;
             line-height: 14px;
             letter-spacing: 1px;
+            font-family: "Roboto";
             h3 {
-                margin: 4px 0 0;
+                margin: 4px 0;
                 font-size: 20px;
                 font-weight: 600;
-                letter-spacing: 2px;
             }
             p {
                 font-size: 12px;
             }
             p + p {
+                height: 42px;
+                overflow: hidden;
                 margin: 10px 0 0 0;
-                font-weight: 600;
+                font-size: 13px;
             }
         }
     }
@@ -765,6 +794,8 @@ header {
     .share-links-2 {
         ul {
             li {
+                padding: 0;
+                margin-left: 4px;
                 span {
                     letter-spacing: 1px;
                 }
@@ -775,6 +806,10 @@ header {
                     line-height: 25px;
                     text-align: center;
                     @extend .social-icn-2;
+                    @include transition(all 300ms ease-in-out);
+                    &:hover {
+                        @include transition(all 300ms ease-in-out);
+                    }
                 }
                 .fb {
                     &:hover {
@@ -808,7 +843,7 @@ header {
                 }
                 .env {
                     &:hover {
-                        background-color: #000000;
+                        background-color: #DB4437;
                     }
                 }
             }
@@ -818,10 +853,11 @@ header {
         margin-top: -10px;
     }
     .love-blog-image {
+        width: 525px;
+        margin: 20px 0;
         img {
-            width: 90%;
-            height: 100%;
-            margin: 10px 0;
+            max-height: 100%;
+            max-width: 100%;
         }
     }
     .love-blog-detail {
@@ -836,6 +872,7 @@ header {
             @extend .trasform-50;
         }
         .other-buttons {
+            margin-left: 3px;
             display: table;
             @extend .trasform-50;
             ul {
@@ -863,13 +900,13 @@ footer {
     a {
         color: $body-bg;
         &:hover {
-            color: $gray-light;
+            color: $brand-pink;
         }
     }
     .footer-menus,
     .footer-links {
         li {
-            margin-right: 20px;
+            margin: 0 15px;
             letter-spacing: 1px;
         }
         li:last-child {
@@ -891,7 +928,8 @@ footer {
         font-family: "Roboto";
         font-size: 12px;
         p.copy {
-            margin-right: 20px;
+            margin-right: 18px;
+            letter-spacing: 1px;
         }
     }
     .social-links {
@@ -944,3 +982,5 @@ footer {
         }
     }
 }
+
+@import 'mobile.scss';
