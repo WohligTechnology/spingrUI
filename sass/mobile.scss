@@ -198,3 +198,42 @@
         }
     }
 }
+
+@media (max-width: 645px) {
+        .slide-me {
+        .row-flex {
+                        display: block;
+        }
+        .slide-part {
+            height: 300px;
+            .content-holder {
+                .content-1 {
+                    p {
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+                }
+                .content-2 {
+                    p {
+                        font-size: 25px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .love-back {
+                height: 300px;
+            }
+            .content-hover {
+                padding: 15px;
+                .fifty {
+                    p.quote {
+                        font-size: 20px;
+                    }
+                    button {
+                        margin: 40px 0;
+                    }
+                }
+            }
+        }
+    }
+}
