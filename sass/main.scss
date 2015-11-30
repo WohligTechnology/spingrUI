@@ -827,7 +827,7 @@ header {
 }
 // Footer
 footer {
-    padding: 40px 0;
+    padding: 30px 0;
     text-align: center;
     a {
         color: $body-bg;
@@ -855,10 +855,13 @@ footer {
         }
     }
     .footer-text {
-        margin: 20px 0;
+        margin: 20px 0 3px;
         text-align: center;
         font-family: "Roboto";
         font-size: 12px;
+        ul {
+            margin: 0;
+        }
         p.copy {
             margin-right: 18px;
             letter-spacing: 1px;
@@ -914,4 +917,8 @@ footer {
         }
     }
 }
+.black {
+    background-color: #000;
+}
+
 @import 'mobile.scss';
