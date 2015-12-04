@@ -1,64 +1,74 @@
 <section class="brand-gray-bg">
-    <div class="love-header">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-1 col-md-10">
-                <div class="love-main brand-white-bg">
-                    <div class="row">
-                        <div class="col-md-8">
+  <div class="love-header"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="love-main brand-white-bg">
+          <div class="row">
+            <div class="col-md-8">
 
-                            <div class="post-elements" ng-repeat="love in loveblog">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-4">
-                                        <div class="post-image">
-                                           <a href="#/lovedetail"> <img ng-src="{{love.img}}" alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8">
-                                       <a href="#/lovedetail"> <div class="post-details brand-gray-lighter">
-                                                <h3 class="brand-black">{{love.title}}</h3>
-                                                <p>{{love.date}}</p>
-                                                <p>{{love.descp}}</p>
-                                            </div></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="most-viewed">
-                                <h1 class="gray-dark">MOST VIEWED</h1>
-                                <ul>
-                                    <li>
-                                       <a href="#/lovedetail"> <div class="mv-elements">
-                                                <img src="img/post1.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                    <li>
-                                        <a href="#/lovedetail"><div class="mv-elements">
-                                                <img src="img/post2.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                    <li>
-                                        <a href="#/lovedetail"><div class="mv-elements">
-                                                <img src="img/post3.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                    <li>
-                                        <a href="#/lovedetail"><div class="mv-elements">
-                                                <img src="img/post3.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+              <div class="post-elements" ng-repeat="love in loveblog">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                    <div class="post-image">
+                      <a href="#/lovedetail">
+                        <img alt="" ng-src="{{love.img}}"/></a>
                     </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8">
+                    <a href="#/lovedetail">
+                      <div class="post-details brand-gray-lighter">
+                        <h3 class="brand-black">{{love.title}}</h3>
+                        <p>{{love.date}}</p>
+                        <p>{{love.descp}}</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="col-md-4">
+              <div class="most-viewed">
+                <h1 class="gray-dark">MOST VIEWED</h1>
+                <ul>
+                  <li>
+                    <a href="#/lovedetail">
+                      <div class="mv-elements">
+                        <img alt="" src="img/post1.jpg"/>
+                        <p class="brand-black">Butterfly Junkie</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#/lovedetail">
+                      <div class="mv-elements">
+                        <img alt="" src="img/post2.jpg"/>
+                        <p class="brand-black">Butterfly Junkie</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#/lovedetail">
+                      <div class="mv-elements">
+                        <img alt="" src="img/post3.jpg"/>
+                        <p class="brand-black">Butterfly Junkie</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#/lovedetail">
+                      <div class="mv-elements">
+                        <img alt="" src="img/post3.jpg"/>
+                        <p class="brand-black">Butterfly Junkie</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
