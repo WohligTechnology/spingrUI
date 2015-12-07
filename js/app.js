@@ -1,35 +1,35 @@
 // JavaScript Document
 var firstapp = angular.module('firstapp', [
-    'ui.router',
-    'phonecatControllers',
-    'templateservicemod',
-    'navigationservice'
+  'ui.router',
+  'phonecatControllers',
+  'templateservicemod',
+  'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
-    // for http request with session
-    $httpProvider.defaults.withCredentials = true;
+  // for http request with session
+  $httpProvider.defaults.withCredentials = true;
 
-    $stateProvider
+  $stateProvider
 
     .state('home', {
-        url: "/home",
-        templateUrl: "views/template.html",
-        controller: 'HomeCtrl'
-    })
+    url: "/home",
+    templateUrl: "views/template.html",
+    controller: 'HomeCtrl'
+  })
 
-    .state('slider', {
-        url: "/slider",
-        templateUrl: "views/template.html",
-        controller: 'SliderCtrl'
-    })
+  .state('slider', {
+    url: "/slider",
+    templateUrl: "views/template.html",
+    controller: 'SliderCtrl'
+  })
 
-    .state('love', {
-        url: "/love",
-        templateUrl: "views/template.html",
-        controller: 'LoveCtrl'
-    })
+  .state('love', {
+    url: "/love",
+    templateUrl: "views/template.html",
+    controller: 'LoveCtrl'
+  })
 
     .state('lovedetail', {
         url: "/lovedetail",
@@ -47,11 +47,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'AboutusCtrl'
     })
 
-    .state('lie', {
-        url: "/lie",
-        templateUrl: "views/template.html",
-        controller: 'LieCtrl'
-    })
+  .state('lie', {
+    url: "/lie",
+    templateUrl: "views/template.html",
+    controller: 'LieCtrl'
+  })
 
     .state('confessions', {
         url: "/confessions",
@@ -91,30 +91,27 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'LustCtrl'
     })
 
-    $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/home");
 
 });
 
 
 firstapp.directive('img', function($compile, $parse) {
-    return {
-        restrict: 'E',
-        replace: false,
-        link: function($scope, element, attrs) {
-            var $element = $(element);
-            if(!attrs.noloading)
-            {
-                $element.after("<img src='img/loading.gif' class='loading' />");
-                var $loading = $element.next(".loading");
-                $element.load(function() {
-                    $loading.remove();
-                    $(this).addClass("doneLoading");
-                });
-            }
-            else
-            {
-                $($element).addClass("doneLoading");
-            }
-        }
-    };
+  return {
+    restrict: 'E',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      if (!attrs.noloading) {
+        $element.after("<img src='img/loading.gif' class='loading' />");
+        var $loading = $element.next(".loading");
+        $element.load(function() {
+          $loading.remove();
+          $(this).addClass("doneLoading");
+        });
+      } else {
+        $($element).addClass("doneLoading");
+      }
+    }
+  };
 });
