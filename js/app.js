@@ -36,6 +36,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'LoveDetailCtrl'
     })
+    .state('liedetail', {
+        url: "/liedetail",
+        templateUrl: "views/template.html",
+        controller: 'LieDetailCtrl'
+    })
+    .state('aboutus', {
+        url: "/aboutus",
+        templateUrl: "views/template.html",
+        controller: 'AboutusCtrl'
+    })
 
     .state('lie', {
         url: "/lie",
@@ -43,6 +53,38 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'LieCtrl'
     })
 
+    .state('confessions', {
+        url: "/confessions",
+        templateUrl: "views/template.html",
+        controller: 'ConfessionsCtrl'
+    })
+
+    .state('confessiondetail', {
+        url: "/confessiondetail",
+        templateUrl: "views/template.html",
+        controller: 'ConfessionDetailCtrl'
+    })
+    .state('sexpert', {
+        url: "/sexpert",
+        templateUrl: "views/template.html",
+        controller: 'SexpertCtrl'
+    })
+    .state('sexpertdetail', {
+        url: "/sexpertdetail",
+        templateUrl: "views/template.html",
+        controller: 'SexpertDetailCtrl'
+    })
+
+    .state('queries', {
+        url: "/queries",
+        templateUrl: "views/template.html",
+        controller: 'QueriesCtrl'
+    })
+    .state('queriesdetail', {
+        url: "/queriesdetail",
+        templateUrl: "views/template.html",
+        controller: 'QueriesDetailCtrl'
+    })
     .state('lust', {
         url: "/lust",
         templateUrl: "views/template.html",

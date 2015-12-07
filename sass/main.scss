@@ -21,6 +21,8 @@ $brand-gray: #323232;
 $brand-gray-lighter: #606060;
 $brand-gray-lighter-2: #969696;
 $brand-gray-darker: #232323;
+$query-color: #e1542e;
+$sex-color: #b026ff;
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
@@ -128,6 +130,12 @@ $space-100: 100px;
 }
 .brand-gray-darker-bg {
     background-color: $brand-gray-darker;
+}
+.query-btn {
+    background-color: $query-color;
+}
+.sexpage-btn {
+    background-color: $sex-color;
 }
 .btn {
     height: 30px;
@@ -628,7 +636,7 @@ header {
     width: 100%;
     height: $space-100 * 3.5;
     background: url(../img/love-detail.png) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .love-main,
 .love-detail-main {
@@ -659,6 +667,7 @@ header {
                 font-size: 12px;
             }
             p + p {
+                color: $brand-gray;
                 height: 42px;
                 overflow: hidden;
                 margin: 10px 0 0 0;
@@ -695,6 +704,19 @@ header {
                         font-weight: 600;
                     }
                 }
+                figure {
+                    margin-left: -20px;
+                    height: $space-100;
+                    img {
+                        @extend .max-width-height-100;
+                    }
+                    figcaption {
+                        margin: 5px 0 0 -85px;
+                        color: #000;
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
@@ -707,6 +729,66 @@ header {
     }
 }
 // Love Detail
+.share-links,
+.share-links-2 {
+    ul {
+        li {
+            padding: 0;
+            margin-left: 4px;
+            span {
+                margin-right: 10px;
+                letter-spacing: 1px;
+            }
+            a {
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                line-height: 25px;
+                text-align: center;
+                @extend .social-icn-2;
+                @include transition(all 300ms ease-in-out);
+                &:hover {
+                    @include transition(all 300ms ease-in-out);
+                }
+            }
+            .fb {
+                &:hover {
+                    background-color: #3b5998;
+                }
+            }
+            .twi {
+                &:hover {
+                    background-color: #00aced;
+                }
+            }
+            .insta {
+                &:hover {
+                    background-color: #125688;
+                }
+            }
+            .gp {
+                &:hover {
+                    background-color: #dd4b39;
+                }
+            }
+            .pin {
+                &:hover {
+                    background-color: #cb2027;
+                }
+            }
+            .you {
+                &:hover {
+                    background-color: #bb0000;
+                }
+            }
+            .env {
+                &:hover {
+                    background-color: #DB4437;
+                }
+            }
+        }
+    }
+}
 .love-detail-main {
     .blog-time {
         letter-spacing: 1px;
@@ -720,66 +802,6 @@ header {
         p {
             margin-left: 5px;
             font-weight: 500;
-        }
-    }
-    .share-links,
-    .share-links-2 {
-        ul {
-            li {
-                padding: 0;
-                margin-left: 4px;
-                span {
-                    margin-right: 10px;
-                    letter-spacing: 1px;
-                }
-                a {
-                    width: 25px;
-                    height: 25px;
-                    display: inline-block;
-                    line-height: 25px;
-                    text-align: center;
-                    @extend .social-icn-2;
-                    @include transition(all 300ms ease-in-out);
-                    &:hover {
-                        @include transition(all 300ms ease-in-out);
-                    }
-                }
-                .fb {
-                    &:hover {
-                        background-color: #3b5998;
-                    }
-                }
-                .twi {
-                    &:hover {
-                        background-color: #00aced;
-                    }
-                }
-                .insta {
-                    &:hover {
-                        background-color: #125688;
-                    }
-                }
-                .gp {
-                    &:hover {
-                        background-color: #dd4b39;
-                    }
-                }
-                .pin {
-                    &:hover {
-                        background-color: #cb2027;
-                    }
-                }
-                .you {
-                    &:hover {
-                        background-color: #bb0000;
-                    }
-                }
-                .env {
-                    &:hover {
-                        background-color: #DB4437;
-                    }
-                }
-            }
         }
     }
     .share-links {
@@ -846,12 +868,29 @@ footer {
         }
     }
     .footer-links {
-        ul {
-            margin: 40px 0;
+        .subscribe {
+            margin: 25px 0;
             padding: 15px 0;
             border-top: 1px solid $brand-gray-lighter;
             border-bottom: 1px solid $brand-gray-lighter;
-            text-align: center;
+            line-height: 34px;
+        }
+        .form-group {
+            margin: 0;
+            label {
+                margin: 0;
+                font-size: 17px;
+                text-align: center;
+            }
+            input {
+                color: #fff;
+                border-color: $brand-gray-lighter;
+                background-color: $brand-gray-lighter;
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
         }
     }
     .footer-text {
@@ -917,8 +956,138 @@ footer {
         }
     }
 }
+.aboutus-back {
+    background: url('../img/aboutus.png') no-repeat;
+    background-size: 100% 100%;
+    @extend.love-header;
+}
+.abt {
+    background-color: #fff;
+    margin-top: -50px;
+    padding: 50px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    .abt-txt {
+        width: 74%;
+        margin: 0 0 20px 0;
+        color: $brand-gray;
+        position: relative;
+        font-size: 20px;
+        line-height: 25px;
+        &:after {
+            content: url('../img/invert-comma.png');
+            position: absolute;
+            top: -10px;
+            left: -30px;
+        }
+    }
+    p {
+        margin: 20px 0;
+    }
+}
+.lie-header {
+    background: url('../img/lie-main.png');
+    background-size: 100% 100%;
+    position: relative;
+    @extend.love-header;
+    .text-inside {
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        @include transform(translate(-30%,
+        -30%));
+        h2 {
+            color: #fff;
+            font-size: 200px;
+            font-weight: 600;
+        }
+    }
+}
+.content-main {
+    padding: 50px 0 50px 50px;
+    margin-top: -50px;
+    background-color: #fff;
+}
+.content-right {
+    position: relative;
+    .secret {
+        width: 100%;
+        padding: 25px;
+        border: 5px solid #000;
+        position: absolute;
+        left: 25px;
+        h5 {
+            font-size: 35px;
+            text-transform: uppercase;
+            word-spacing: 5px;
+            span {
+                display: block;
+            }
+        }
+        p {
+            margin: 15px 0;
+            font-size: 15px;
+            line-height: 100%;
+        }
+        button {
+            padding: 6px 82px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 100%;
+        }
+    }
+}
+.blog-content {
+    border-bottom: 2px solid #e0e0e0;
+    margin: 20px 0;
+    h4 {
+        font-size: 40px;
+        font-style: italic;
+    }
+    p {
+        margin: 20px 0;
+    }
+    .ls {
+        letter-spacing: 1px;
+        word-spacing: 4px;
+    }
+}
+.back-img {
+    @extend.love-header;
+    background: url('../img/confession.png') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    .text-inside {
+        @extend.trasform-50;
+        h2 {
+            color: #fff;
+            font-size: 125px;
+            font-weight: 300;
+            letter-spacing: 17px;
+            text-transform: uppercase;
+        }
+    }
+}
+.sexpert {
+    background: url('../img/sexpert.png') no-repeat;
+    background-size: 100% 100%;
+    @extend.love-header;
+}
+.queries {
+    background: url('../img/queries.png') no-repeat;
+    background-size: 100% 100%;
+    @extend.love-header;
+    .text-inside {
+        h2 {
+            font-size: 100px;
+            letter-spacing: 6px;
+        }
+    }
+}
 .black {
     background-color: #000;
 }
-
+.min500 {
+    min-height: 500px;
+}
 @import 'mobile.scss';

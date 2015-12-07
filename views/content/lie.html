@@ -1,0 +1,53 @@
+<section class="brand-gray-bg">
+    <div class="lie-header">
+        <div class="text-inside">
+            <h2>lie</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="love-main brand-white-bg">
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <div class="post-elements" ng-repeat="lie in lieblog">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="post-image">
+                                            <a href="#/liedetail"> <img ng-src="{{lie.img}}" alt="" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-sm-8">
+                                        <a href="#/liedetail">
+                                            <div class="post-details brand-gray-lighter">
+                                                <h3 class="brand-black">{{lie.title}}</h3>
+                                                <p>{{lie.date}}</p>
+                                                <p>{{lie.descp}}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="most-viewed">
+                                <h1 class="gray-dark">MOST VIEWED</h1>
+                                <ul>
+                                    <li ng-repeat=" most in viewed">
+                                        <a href="#/liedetail">
+                                            <figure>
+                                                <img ng-src="{{most.img}}" alt="Most Viewed">
+                                                <figcaption>{{most.caption}}</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

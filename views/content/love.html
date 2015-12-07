@@ -12,15 +12,17 @@
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
                                         <div class="post-image">
-                                           <a href="#/lovedetail"> <img ng-src="{{love.img}}" alt="" /></a>
+                                            <a href="#/lovedetail"> <img ng-src="{{love.img}}" alt="" /></a>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-sm-8">
-                                       <a href="#/lovedetail"> <div class="post-details brand-gray-lighter">
+                                        <a href="#/lovedetail">
+                                            <div class="post-details brand-gray-lighter">
                                                 <h3 class="brand-black">{{love.title}}</h3>
                                                 <p>{{love.date}}</p>
                                                 <p>{{love.descp}}</p>
-                                            </div></a>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -29,29 +31,13 @@
                             <div class="most-viewed">
                                 <h1 class="gray-dark">MOST VIEWED</h1>
                                 <ul>
-                                    <li>
-                                       <a href="#/lovedetail"> <div class="mv-elements">
-                                                <img src="img/post1.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                    <li>
-                                        <a href="#/lovedetail"><div class="mv-elements">
-                                                <img src="img/post2.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                    <li>
-                                        <a href="#/lovedetail"><div class="mv-elements">
-                                                <img src="img/post3.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
-                                    </li>
-                                    <li>
-                                        <a href="#/lovedetail"><div class="mv-elements">
-                                                <img src="img/post3.jpg" alt="" />
-                                                <p class="brand-black">Butterfly Junkie</p>
-                                            </div></a>
+                                    <li ng-repeat="most in viewed">
+                                        <a href="#/lovedetail">
+                                            <figure>
+                                               <img src="{{most.img}}" alt="" class="img-reponsive">
+                                                <figcaption class="brand-black">{{most.caption}}</figcaption>
+                                            </figure>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
