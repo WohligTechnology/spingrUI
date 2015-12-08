@@ -97,7 +97,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     })
     .controller('ConfessionDetailCtrl', function ($scope, TemplateService, NavigationService) {
         //Used to name the .html file
-        $scope.template = TemplateService.changecontent("Confessiondetail");
+        $scope.template = TemplateService.changecontent("confessiondetail");
         $scope.menutitle = NavigationService.makeactive("Confession Detail");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
