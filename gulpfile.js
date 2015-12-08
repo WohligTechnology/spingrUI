@@ -11,7 +11,7 @@ var jsArray = [
   './bower_components/angular-flexslider/angular-flexslider.js',
   './js/app.js',
   './js/controllers.js',
-  './js/templateservice.js',
+  './js/templateservice.js', 
   './js/navigation.js',
 
   //please do not change it
