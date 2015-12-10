@@ -102,13 +102,13 @@
                     <div class="other-buttons">
                       <ul class="list-inline">
                         <li>
-                          <button class="btn btn-pink" type="button">
-                            <i class="fa fa-chevron-left i-left"></i>Previous Story</button>
+                          <a href="#/lovedetail/{{article.prev}}" ng-if="article.prev" class="btn btn-pink" type="button">
+                            <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
                         </li>
                         <li>
-                          <button class="btn btn-pink" type="button">Next Story
+                          <a href="#/lovedetail/{{article.next}}" ng-if="article.next" class="btn btn-pink" type="button">Next Story
                             <i class="fa fa-chevron-right i-right"></i>
-                          </button>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -121,10 +121,11 @@
                 <h1 class="gray-dark">RECOMMENDED</h1>
                 <ul>
                   <li ng-repeat="recommed in recommended">
-                    <div class="mv-elements">
+                    <a href="#/lovedetail/{{recommed.id}}"><div class="mv-elements" >
                       <img alt="" ng-src="{{recommed.image|serverimage}}" />
                       <p class="brand-black">{{recommed.title}}</p>
                     </div>
+                    </a>
                   </li>
                 </ul>
               </div>

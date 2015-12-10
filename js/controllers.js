@@ -227,6 +227,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(data);
     data.article.timestamp = moment(data.article.timestamp).toDate();
     $scope.article = data.article;
+    $scope.article.next = data.next;
+    $scope.article.prev = data.prev;
     $scope.recommended = data.recommended;
   };
   NavigationService.getArticle($stateParams.id,loadArticle);
