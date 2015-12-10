@@ -1,29 +1,27 @@
 <section class="brand-gray-bg">
   <div class="love-header"></div>
   <div class="container">
-
     <div class="row">
       <div class="col-md-offset-1 col-md-10">
-
         <div class="love-detail-main brand-white-bg">
           <div class="row">
             <div class="col-md-8">
-
               <div class="row">
                 <div class="col-md-9 col-sm-9">
                   <p class="brand-gray-lighter-2 blog-time">
-                    March 13, 2015 by LLL
+                    {{article.timestamp|date}}
+                    by
+                    {{article.author}}
                   </p>
-                  <h1 class="brand-pink">LOVE FOR TWO, PLEASE!</h1>
+                  <h1 class="brand-pink">{{article.title}}</h1>
                 </div>
                 <div class="col-md-3 col-sm-3">
                   <div class="shares brand-gray-lighter-2">
-                    <h2>250</h2>
-s                    <p>SHARES</p>
+                    <h2>{{article.views}}</h2>
+                    <p>VIEWS</p>
                   </div>
                 </div>
               </div>
-
               <div class="share-links">
                 <ul class="list-inline">
                   <li>
@@ -57,35 +55,12 @@ s                    <p>SHARES</p>
                   </li>
                 </ul>
               </div>
-
               <div class="love-blog-image">
-                <img alt="" src="img/love-pic.jpg"/>
+                <img alt="" ng-src="{{article.image|serverimage}}"/>
               </div>
-
               <div class="love-blog-detail">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <p ng-bind = "article.desc"></p>
               </div>
-
               <div class="other-links">
                 <div class="row">
                   <div class="col-md-6 col-sm-6">
@@ -140,40 +115,15 @@ s                    <p>SHARES</p>
                   </div>
                 </div>
               </div>
-
             </div>
             <div class="col-md-4">
               <div class="most-viewed-2">
                 <h1 class="gray-dark">RECOMMENDED</h1>
                 <ul>
-                  <li>
+                  <li ng-repeat="recommed in recommended">
                     <div class="mv-elements">
-                      <img alt="" src="img/post1.jpg"/>
-                      <p class="brand-black">Butterfly Junkie</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="mv-elements">
-                      <img alt="" src="img/post2.jpg"/>
-                      <p class="brand-black">Butterfly Junkie</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="mv-elements">
-                      <img alt="" src="img/post3.jpg"/>
-                      <p class="brand-black">Butterfly Junkie</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="mv-elements">
-                      <img alt="" src="img/post1.jpg"/>
-                      <p class="brand-black">Butterfly Junkie</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="mv-elements">
-                      <img alt="" src="img/post2.jpg"/>
-                      <p class="brand-black">Butterfly Junkie</p>
+                      <img alt="" ng-src="{{recommed.image|serverimage}}" />
+                      <p class="brand-black">{{recommed.title}}</p>
                     </div>
                   </li>
                 </ul>
@@ -181,9 +131,7 @@ s                    <p>SHARES</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>

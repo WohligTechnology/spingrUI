@@ -6,19 +6,19 @@
                 <div class="love-main brand-white-bg">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="post-elements" ng-repeat="love in loveblog">
+                            <div class="post-elements" ng-repeat="love in loveblog track by $index">
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4">
                                         <div class="post-image bdhov">
-                                            <a href="#/lovedetail"> <img ng-src="{{love.img}}" alt="" /></a>
+                                            <a href="#/lovedetail/{{love.id}}"> <img ng-src="{{love.image|serverimage}}" alt="" /></a>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-sm-8">
-                                        <a href="#/lovedetail">
+                                        <a href="#/lovedetail/{{love.id}}">
                                             <div class="post-details brand-gray-lighter">
                                                 <h3 class="brand-black">{{love.title}}</h3>
-                                                <p>{{love.date}}</p>
-                                                <p>{{love.descp}}</p>
+                                                <p>{{love.timestamp|date}} by {{love.author}}</p>
+                                                <p>{{love.desc}}</p>
                                             </div>
                                         </a>
                                     </div>
@@ -29,11 +29,11 @@
                             <div class="most-viewed">
                                 <h1 class="gray-dark">MOST VIEWED</h1>
                                 <ul>
-                                    <li ng-repeat="most in viewed">
+                                    <li ng-repeat="most in viewed track by $index">
                                         <a href="#/lovedetail">
                                             <figure>
-                                                <img src="{{most.img}}" alt="" class="img-reponsive">
-                                                <figcaption class="brand-black">{{most.caption}}</figcaption>
+                                                <img ng-src="{{most.image|serverimage}}" alt="" class="img-reponsive">
+                                                <figcaption class="brand-black">{{most.title}}</figcaption>
                                             </figure>
                                         </a>
                                     </li>

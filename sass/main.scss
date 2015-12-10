@@ -1,7 +1,7 @@
 /*Start writing sass here*/
 
-@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300);
+// @import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -744,7 +744,7 @@ header {
         @include transition(all 300ms linear);
     }
     &:hover:after {
-        border: 5px solid $brand-pink;        
+        border: 5px solid $brand-pink;
         @include transition(all 300ms linear);
     }
 }
@@ -1180,6 +1180,7 @@ footer {
         }
     }
 }
+
 .black {
     background-color: #000;
 }

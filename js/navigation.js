@@ -1,6 +1,8 @@
+var adminUrl = "http://localhost/lllbackend/";
+var adminJson = adminUrl+"index.php/json/";
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Home",
     classis: "active",
@@ -21,6 +23,15 @@ var navigationservice = angular.module('navigationservice', [])
   return {
     getnav: function() {
       return navigation;
+    },
+    getCategories: function(callback) {
+      $http.get(adminJson + 'getCategories').success(callback);
+    },
+    getArticle: function(id,callback) {
+      $http.get(adminJson + 'getArticle?id='+id).success(callback);
+    },
+    getCategoryArticles: function(id,callback) {
+      $http.get(adminJson + 'getCategoryArticles?id='+id).success(callback);
     },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
