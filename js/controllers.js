@@ -61,6 +61,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.confessionblog = [{
       head: "#51",
+        title: "I have heard a lot about women pleasuring themselves and reaching orgasm without a man. I want to try it out.",
       content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me. We lived together but he was never there with me. Ignored me for his friends, family.. Then he would always spend my money and will say he has spent alot on me which i dont even know. I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends..."
     }];
   })
@@ -74,13 +75,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.footercolor = "black";
   $scope.confessionblog = [{
     head: "#51",
-    content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me. We lived together but he was never there with me. Ignored me for his friends, family.. Then he would always spend my money and will say he has spent alot on me which i dont even know. I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends..."
+    content: "I have heard a lot about women pleasuring themselves and reaching orgasm without a man. I want to try it out. Are there any precautions that I need to take?"
   }, {
     head: "#52",
-    content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me. We lived together but he was never there with me. Ignored me for his friends, family.. Then he would always spend my money and will say he has spent alot on me which i dont even know. I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends..."
+    content: "I have heard a lot about women pleasuring themselves and reaching orgasm without a man. I want to try it out. Are there any precautions that I need to take?"
   }, {
     head: "#53",
-    content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me. We lived together but he was never there with me. Ignored me for his friends, family.. Then he would always spend my money and will say he has spent alot on me which i dont even know. I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends..."
+    content: "I have heard a lot about women pleasuring themselves and reaching orgasm without a man. I want to try it out. Are there any precautions that I need to take?"
   }];
 })
 

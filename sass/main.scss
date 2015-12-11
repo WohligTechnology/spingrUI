@@ -261,21 +261,44 @@ img {
 img.doneLoading {
     opacity: 1;
 }
-
 //lie-page-color
-
 .put-me-green {
     .title {
         color: $brand-green;
     }
     .borderme {
-        border: 5px solid $brand-green;
+        border: 5px solid $brand-green !important;
     }
     .color-me {
         @extend.btn-green;
     }
+    .border-me-hov {
+        &:hover:after {
+            border: 5px solid $brand-green;
+        }
+    }
+}
+//confession-page
+.put-me-confess {
+    .color-me {
+        @extend.btn-blue;
+    }
 }
 
+//queries-page
+
+.put-me-query {
+    .color-me {
+        @extend.query-btn;
+    }
+}
+
+//sexpert-page
+.put-me-sexpert {
+    .color-me {
+        @extend.sexpage-btn;
+    }
+}
 ul {
     list-style: none;
 }
@@ -741,17 +764,6 @@ header {
             padding: 0;
             li {
                 margin-top: 40px;
-                .mv-elements {
-                    margin-left: -20px;
-                    height: $space-100;
-                    img {
-                        @extend .max-width-height-100;
-                    }
-                    p {
-                        margin: 5px 0 0 -85px;
-                        font-weight: 600;
-                    }
-                }
                 figure {
                     margin-left: -20px;
                     width: 290px;
@@ -975,24 +987,13 @@ header {
             display: table;
             @extend .trasform-50;
         }
-        .other-buttons {
-            margin-left: 3px;
-            display: table;
-            @extend .trasform-50;
-            ul {
-                li {
-                    button {
-                        line-height: 10px;
-                        .i-left {
-                            font-size: 12px;
-                            margin-right: 10px;
-                        }
-                        .i-right {
-                            margin-left: 10px;
-                        }
-                    }
-                }
-            }
+    }
+    a {
+        .i-left {
+            margin-right: 5px;
+        }
+        .i-right {
+            margin-left: 5px;
         }
     }
 }
@@ -1214,8 +1215,15 @@ footer {
         font-size: 40px;
         font-style: italic;
     }
+    .dark {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 22px;
+    }
     p {
         margin: 20px 0;
+        letter-spacing: 1px;
     }
     .ls {
         letter-spacing: 1px;
@@ -1223,10 +1231,6 @@ footer {
     }
 }
 .back-img {
-    @extend.love-header;
-    background: url('../img/confession.png') no-repeat;
-    background-size: 100% 100%;
-    position: relative;
     .text-inside {
         @extend.trasform-50;
         h2 {
@@ -1234,6 +1238,7 @@ footer {
             font-size: 125px;
             font-weight: 300;
             letter-spacing: 17px;
+            font-family: $font-family-serif;
             text-transform: uppercase;
         }
     }
