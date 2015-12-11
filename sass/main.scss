@@ -53,6 +53,10 @@ $border-radius-small: 0 !default;
 $menu-height: 65px !default;
 $space-100: 100px;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@font-face {
+    font-family: "lane.posh";
+    src: url('../fonts/lane.posh.ttf');
+}
 .brand-white {
     color: $body-bg;
 }
@@ -154,19 +158,29 @@ $space-100: 100px;
     outline: 0 !important;
 }
 .btn-blue {
-    @include button-variant(white, $brand-blue, $brand-blue);
+    @include button-variant(white,
+    $brand-blue,
+    $brand-blue);
 }
 .btn-green {
-    @include button-variant(white, $brand-green-neon, $brand-green-neon);
+    @include button-variant(white,
+    $brand-green-neon,
+    $brand-green-neon);
 }
 .btn-red {
-    @include button-variant(white, $brand-red, $brand-red);
+    @include button-variant(white,
+    $brand-red,
+    $brand-red);
 }
 .btn-pink {
-    @include button-variant(white, $brand-pink, $brand-pink);
+    @include button-variant(white,
+    $brand-pink,
+    $brand-pink);
 }
 .btn-gray {
-    @include button-variant(white, $brand-gray, $brand-gray);
+    @include button-variant(white,
+    $brand-gray,
+    $brand-gray);
 }
 .border-blue:after {
     border-color: $brand-blue;
@@ -252,6 +266,22 @@ ul {
 }
 nav li:hover .dropdown-menu {
     display: block;
+}
+.padding-right {
+    padding-right: 50px;
+}
+.heading {
+    .love-head {
+        h2 {
+            font-family: "lane.posh";
+            font-weight: 500;
+        }
+    }
+    .fontdo {
+        h2 {
+            font-family: $font-family-sans-serif;
+        }
+    }
 }
 .over-lap {
     padding: 25px;
@@ -1166,15 +1196,7 @@ footer {
         }
     }
 }
-.sexpert {
-    background: url('../img/sexpert.png') no-repeat;
-    background-size: 100% 100%;
-    @extend.love-header;
-}
 .queries-pg {
-    background: url('../img/queries.png') no-repeat;
-    background-size: 100% 100%;
-    @extend.love-header;
     .text-inside {
         h2 {
             font-size: 100px;
