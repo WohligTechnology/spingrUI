@@ -34,6 +34,9 @@ var navigationservice = angular.module('navigationservice', [])
     getCategoryArticles: function(id,callback) {
       $http.get(adminJson + 'getCategoryArticles?id='+id).success(callback);
     },
+    sendSubsribe:function(email,callback) {
+      $http.get(adminJson + 'addSubscriber?email='+email).success(callback);
+    },
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
         if (navigation[i].name == menuname) {

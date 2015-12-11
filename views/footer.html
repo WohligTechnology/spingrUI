@@ -11,18 +11,21 @@
                 <li><a href="#">Goops</a></li>
             </ul>
         </div>
-        <div class="footer-links">
+        <div class="footer-links" ng-controller="footerCtrl">
             <div class="row">
                 <div class="col-md-offset-3 col-md-6">
                     <form action="" class="form-horizontal subscribe">
-                        <div class="form-group">
+                        <div class="form-group" ng-if="!form.done">
                             <label for="subscribe" class="col-md-2">Subscribe</label>
                             <div class="col-md-8">
-                                <input type="email" id="subscribe" class="form-control">
+                                <input type="email" ng-model="form.email" ng-change="checkdisble(form.email)" id="subscribe" class="form-control">
                             </div>
                             <div class="col-md-2">
-                                <buttton type="button" class="btn brand-gray-lighter-bg sub">Submit</buttton>
+                                <buttton ng-click="sendEmail(form.email)" type="button" class="btn brand-gray-lighter-bg sub">Submit</buttton>
                             </div>
+                        </div>
+                        <div class="form-group" ng-if="form.done">
+                            <label for="subscribe">{{form.complete}}</label>
                         </div>
                     </form>
                 </div>
