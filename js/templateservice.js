@@ -22,7 +22,7 @@ templateservicemod.service('TemplateService', function() {
     value = parseInt(value);
     switch (value) {
       case 1:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/confessionhead.html";
         return "";
         break;
       case 2:
