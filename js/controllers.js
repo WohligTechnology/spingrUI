@@ -25,20 +25,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.footercolor = "black";
 
 
+
   function getArticles(data) {
+
+
+    TemplateService.getheader(data.category.id);
+
     console.log(data);
     $scope.loveblog = data.article;
-    _.each($scope.loveblog,function(n) {
+    _.each($scope.loveblog, function(n) {
       n.timestamp = moment(n.timestamp).toDate();
 
     });
     $scope.viewed = data.mostViewed;
 
   };
-  NavigationService.getCategoryArticles(1,getArticles);
+  NavigationService.getCategoryArticles(1, getArticles);
 })
 
-  .controller('LieDetailCtrl', function($scope, TemplateService, NavigationService) {
+.controller('LieDetailCtrl', function($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("liedetail");
     $scope.menutitle = NavigationService.makeactive("Lie Detail");
@@ -221,9 +226,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 })
 
-.controller('LoveDetailCtrl', function($scope, TemplateService, NavigationService,$stateParams) {
+.controller('LoveDetailCtrl', function($scope, TemplateService, NavigationService, $stateParams) {
   //Used to name the .html file
-  function loadArticle (data) {
+  function loadArticle(data) {
     console.log(data);
     data.article.timestamp = moment(data.article.timestamp).toDate();
     $scope.article = data.article;
@@ -231,7 +236,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.article.prev = data.prev;
     $scope.recommended = data.recommended;
   };
-  NavigationService.getArticle($stateParams.id,loadArticle);
+  NavigationService.getArticle($stateParams.id, loadArticle);
   $scope.template = TemplateService.changecontent("lovedetail");
   $scope.menutitle = NavigationService.makeactive("Love Detail");
   TemplateService.title = $scope.menutitle;
