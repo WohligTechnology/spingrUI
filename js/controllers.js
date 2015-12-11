@@ -32,10 +32,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.getheader(data.category.id);
 
     console.log(data);
+    $scope.category = data.catgory;
     $scope.loveblog = data.article;
     _.each($scope.loveblog, function(n) {
       n.timestamp = moment(n.timestamp).toDate();
-
     });
     $scope.viewed = data.mostViewed;
 
@@ -252,37 +252,39 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 })
 
-//.controller('SliderCtrl', function($scope, TemplateService, NavigationService) {
-//    //Used to name the .html file
-//    $scope.template = TemplateService.changecontent("slider");
-//    $scope.menutitle = NavigationService.makeactive("slider");
-//    TemplateService.title = $scope.menutitle;
-//    $scope.navigation = NavigationService.getnav();
-//
-//    $scope.sliderpart = [
-//
-//      {
-//        img: "img/love.jpg"
-//      }, {
-//        img: "img/slide2.jpg"
-//      }, {
-//        img: "img/slide3.jpg"
-//      }, {
-//        img: "img/slide4.jpg"
-//      }, {
-//        img: "img/lie.jpg"
-//      }, {
-//        img: "img/slide6.jpg"
-//      }, {
-//        img: "img/slide7.jpg"
-//      }, {
-//        img: "img/slide8.jpg"
-//      }, {
-//        img: "img/lust.jpg"
-//      }
-//
-//    ];
-//  })
+.controller('footerCtrl', function($scope, TemplateService, NavigationService) {
+  $scope.form={isdisable : true};
+  function doneCallback(data) {
+    $scope.form.done= true;
+    if(data.value)
+    {
+      $scope.form.complete = "Thank you for Subsribing.";
+    }
+    else {
+      $scope.form.complete = "Email id is already Subscribed.";
+    }
+
+  }
+  $scope.checkdisble = function( email ) {
+    console.log(email);
+      if(email)
+      {
+          $scope.form.isdisable = false;
+      }
+      else {
+        $scope.form.isdisable = true;
+      }
+  };
+  $scope.sendEmail = function(email) {
+    if(!$scope.form.isdisable)
+    {
+      NavigationService.sendSubsribe(email,doneCallback);
+    }
+
+  };
+
+})
+
 .controller('headerctrl', function($scope, TemplateService, NavigationService) {
   $scope.template = TemplateService;
   var get = false;

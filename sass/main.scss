@@ -177,11 +177,6 @@ $space-100: 100px;
     $brand-pink,
     $brand-pink);
 }
-.btn-brand-gray-lighter-bg {
-    @include button-variant(white,
-    brand-gray-lighter-bg,
-    brand-gray-lighter-bg);
-}
 .btn-gray {
     @include button-variant(white,
     $brand-gray,
