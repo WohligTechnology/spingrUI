@@ -24,22 +24,22 @@ templateservicemod.service('TemplateService', function() {
         this.headermenu = "views/page-header/lovehead.html";
         break;
       case 2:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/liehead.html";
         break;
       case 3:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/lusthead.html";
         break;
       case 4:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/confessionhead.html";
         break;
       case 5:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/sexperthead.html";
         break;
       case 6:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/querieshead.html";
         break;
       case 7:
-        this.headermenu = "views/page-header/lovehead.html";
+        this.headermenu = "views/page-header/goopshead.html";
         break;
       default:
         this.headermenu = "views/page-header/lovehead.html";
