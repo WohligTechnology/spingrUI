@@ -32,7 +32,9 @@
                                     <li ng-repeat=" most in viewed">
                                         <a href="#/liedetail">
                                             <figure>
-                                                <img ng-src="{{most.img}}" alt="Most Viewed">
+                                                <div class="img-holder">
+                                                    <img ng-src="{{most.img}}" alt="Most Viewed">
+                                                </div>
                                                 <figcaption>{{most.caption}}</figcaption>
                                             </figure>
                                         </a>

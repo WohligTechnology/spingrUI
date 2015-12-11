@@ -131,6 +131,10 @@
             }
         }
     }
+    .love-detail-main .most-viewed-2 ul li figure {
+        margin: 0;
+        width: 190px;
+    }
 }
 @media (max-width: 990px) {
     header {
@@ -162,14 +166,6 @@
         }
         .most-viewed {
             left: 0;
-            ul {
-                li {
-                    figure {
-                        margin: 0;
-                        width: 190px;
-                    }
-                }
-            }
         }
     }
     .love-detail-main {
@@ -207,6 +203,13 @@
             height: 125px;
         }
     }
+    .love-detail-main .most-viewed-2 ul li figure {
+        margin: 0 auto;
+        width: 290px;
+        figcaption {
+            padding: 0;
+        }
+    }
 }
 @media (max-width:900px) {
     header {
@@ -231,20 +234,11 @@
             }
         }
     }
-    .most-viewed {
+    .love-main {
+        .most-viewed {
             left: 0;
-            ul {
-                li {
-                    figure {
-                        margin: 0 auto;
-                        width: 290px;
-                        figcaption {
-                            padding: 0; 
-                        }
-                    }
-                }
-            }
         }
+    }
     .content-main {
         padding: 30px;
     }
