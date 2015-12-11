@@ -1123,6 +1123,12 @@ footer {
         }
     }
 }
+.ting {
+  &:hover {
+    opacity: .7;
+    color: #fff;
+  }
+}
 .aboutus-back {
     background: url('../img/aboutus.png') no-repeat;
     background-size: 100% 100%;

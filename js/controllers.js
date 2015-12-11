@@ -29,7 +29,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   function getArticles(data) {
 
 
-    TemplateService.getheader(data.category.id);
+    $scope.catColor = TemplateService.getheader(data.category.id);
 
     console.log(data);
     $scope.category = data.catgory;
@@ -231,6 +231,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   //Used to name the .html file
   function loadArticle(data) {
     console.log(data);
+    $scope.catColor = TemplateService.getheader(data.category.id);
     data.article.timestamp = moment(data.article.timestamp).toDate();
     $scope.article = data.article;
     $scope.article.next = data.next;
