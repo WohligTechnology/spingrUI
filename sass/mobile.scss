@@ -162,6 +162,14 @@
         }
         .most-viewed {
             left: 0;
+            ul {
+                li {
+                    figure {
+                        margin: 0;
+                        width: 190px;
+                    }
+                }
+            }
         }
     }
     .love-detail-main {
@@ -223,6 +231,20 @@
             }
         }
     }
+    .most-viewed {
+            left: 0;
+            ul {
+                li {
+                    figure {
+                        margin: 0 auto;
+                        width: 290px;
+                        figcaption {
+                            padding: 0; 
+                        }
+                    }
+                }
+            }
+        }
     .content-main {
         padding: 30px;
     }

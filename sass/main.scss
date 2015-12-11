@@ -177,6 +177,11 @@ $space-100: 100px;
     $brand-pink,
     $brand-pink);
 }
+.btn-brand-gray-lighter-bg {
+    @include button-variant(white,
+    brand-gray-lighter-bg,
+    brand-gray-lighter-bg);
+}
 .btn-gray {
     @include button-variant(white,
     $brand-gray,
@@ -692,6 +697,9 @@ header {
                 margin: 4px 0;
                 font-size: 20px;
                 font-weight: 600;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap
             }
             p {
                 font-size: 12px;
@@ -736,12 +744,19 @@ header {
                 }
                 figure {
                     margin-left: -20px;
-                    height: $space-100;
-                    img {
-                        @extend .max-width-height-100;
+                    width: 290px;
+                    .img-holder {
+                        width: 175px;
+                        max-height: 100px;
+                        margin: 0 auto;
+                        img {
+                            max-width: 100%;
+                            max-height: 100px;
+                        }
                     }
                     figcaption {
-                        margin: 5px 0 0 -85px;
+                        padding: 0 25px;
+                        margin: 5px 0 0 0;
                         color: #000;
                         font-size: 15px;
                         font-weight: 600;
@@ -1075,6 +1090,13 @@ footer {
                 &:focus {
                     box-shadow: none;
                     outline: none;
+                }
+            }
+            .sub {
+                height: 34px;
+                &:hover {
+                    color: #fff;
+                    background-color: $brand-gray-lighter-2;
                 }
             }
         }

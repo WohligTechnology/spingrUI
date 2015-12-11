@@ -31,7 +31,9 @@
                                     <li ng-repeat="most in viewed track by $index">
                                         <a href="#/lovedetail">
                                             <figure>
-                                                <img ng-src="{{most.image|serverimage}}" alt="" class="img-reponsive">
+                                                <div class="img-holder">
+                                                    <img ng-src="{{most.image|serverimage}}" alt="" class="img-reponsive">
+                                                </div>
                                                 <figcaption class="brand-black">{{most.title}}</figcaption>
                                             </figure>
                                         </a>
