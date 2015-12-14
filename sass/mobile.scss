@@ -116,6 +116,10 @@
         margin: 0;
         width: 190px;
     }
+    .love-main .most-viewed ul li figure {
+        margin: 0;
+        width: 190px;
+    }
 }
 
 .heading {
@@ -194,6 +198,13 @@
         }
     }
     .love-detail-main .most-viewed-2 ul li figure {
+        margin: 0 auto;
+        width: 290px;
+        figcaption {
+            padding: 0;
+        }
+    }
+    .love-main .most-viewed ul li figure {
         margin: 0 auto;
         width: 290px;
         figcaption {
