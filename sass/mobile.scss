@@ -136,6 +136,15 @@
         width: 190px;
     }
 }
+
+.heading {
+    .love-head {
+        h2 {
+            font-size: 150px;
+        }
+    }
+}
+
 @media (max-width: 990px) {
     header {
         nav.menu {
@@ -210,7 +219,15 @@
             padding: 0;
         }
     }
+    .heading {
+    .love-head {
+        h2 {
+            font-size: 120px;
+        }
+    }
 }
+}
+
 @media (max-width:900px) {
     header {
         top: 75px;
@@ -243,6 +260,7 @@
         padding: 30px;
     }
 }
+
 @media (max-width:768px) {
     header {
         top: 60px;
@@ -314,7 +332,15 @@
             }
         }
     }
+    .heading {
+    .love-head {
+        h2 {
+            font-size: 100px;
+        }
+    }
 }
+}
+
 @media (max-width: 645px) {
     header {
         top: 50px;
