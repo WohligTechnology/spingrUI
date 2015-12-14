@@ -78,25 +78,6 @@
         .love-blog-image {
             width: 445px;
         }
-        .other-links {
-            .other-buttons {
-                ul {
-                    li {
-                        button {
-                            width: 105px;
-                            font-size: 12px;
-                            padding: 3px 6px;
-                            .i-left {
-                                margin-right: 5px;
-                            }
-                            .i-right {
-                                margin-left: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
     .back-img {
         .text-inside {
@@ -220,12 +201,12 @@
         }
     }
     .heading {
-    .love-head {
-        h2 {
-            font-size: 120px;
+        .love-head {
+            h2 {
+                font-size: 120px;
+            }
         }
     }
-}
 }
 
 @media (max-width:900px) {
@@ -333,12 +314,12 @@
         }
     }
     .heading {
-    .love-head {
-        h2 {
-            font-size: 100px;
+        .love-head {
+            h2 {
+                font-size: 100px;
+            }
         }
     }
-}
 }
 
 @media (max-width: 645px) {
