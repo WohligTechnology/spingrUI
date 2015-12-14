@@ -164,11 +164,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.footercolor = "black";
 
         $scope.sexpertblog = [{
-            content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me. I never was loved by anyone.. Not by parents, not by sisters, friends..."
+                content: "I have just graduated and have been offered my dream job in Mumbai. But it will be moving away from my family and my boyfriend. I don’t know if i will be able to live without him."
     }, {
-            content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me.I never was loved by anyone.. Not by parents, not by sisters, friends..."
+                content: "I am 18 and i met this boy on my holiday to Himachal Pradesh. Now I am back home and i miss him terribly. He is a local and we’ve kept in touch. I want to go back there for my Christmas vacation, but my parents wont allow it. I feel like running away to him. How do i convince my parents to let me go?"
     }, {
-            content: "I was into a relationship for 5 years.. I loved him more than anything in this world. But we always fought. I never was loved by anyone.. Not by parents, not by sisters, friends betrayed me. Even he started behaving which i never expectd. Made fun of me always, stopped hearing my problem, he just stopped talking with me. I never was loved by anyone.. Not by parents, not by sisters, friends..."
+                content: "I have just graduated and have been offered my dream job in Mumbai. But it will be moving away from my family and my boyfriend. I don’t know if i will be able to live without him."
+    },
+            {
+                content: "I am 18 and i met this boy on my holiday to Himachal Pradesh. Now I am back home and i miss him terribly. He is a local and we’ve kept in touch. I want to go back there for my Christmas vacation, but my parents wont allow it. I feel like running away to him. How do i convince my parents to let me go?"
     }];
     })
     .controller('QueriesCtrl', function ($scope, TemplateService, NavigationService) {
