@@ -1,5 +1,7 @@
 // var adminUrl = "http://localhost/lllbackend/";
 var adminUrl = "http://wohlig.co.in/lllbackend/";
+// var adminUrl = "http://localhost/lllbackend/";
+// var adminUrl = "http://192.168.0.122/lllbackend/";
 var adminJson = adminUrl+"index.php/json/";
 var navigationservice = angular.module('navigationservice', [])
 

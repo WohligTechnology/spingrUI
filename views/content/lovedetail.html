@@ -1,249 +1,249 @@
 <section class="brand-gray-bg">
-    <div class="container " ng-class="catColor">
-        <div class="row">
-            <div class="col-md-offset-1 col-md-10">
-                <div class="love-detail-main brand-white-bg">
+  <div class="container " ng-class="catColor">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="love-detail-main brand-white-bg">
 
-                    <div class="row" ng-if="recommended.length > 0">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-9 col-sm-9">
-                                    <p class="brand-gray-lighter-2 blog-time">
-                                        {{article.timestamp|date}} by {{article.author}}
-                                    </p>
-                                    <h1 class="brand-pink title">{{article.title}}</h1>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="shares brand-gray-lighter-2 text-center">
-                                        <h2>{{article.views}}</h2>
-                                        <p>VIEWS</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="share-links">
-                                <ul class="list-inline">
-                                    <li>
-                                        <span>Share :
+          <div class="row" ng-if="recommended.length > 0">
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-9 col-sm-9">
+                  <p class="brand-gray-lighter-2 blog-time">
+                    {{article.timestamp|date}} by {{article.author}}
+                  </p>
+                  <h1 class="brand-pink title">{{article.title}}</h1>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  <div class="shares brand-gray-lighter-2 text-center">
+                    <h2>{{article.views}}</h2>
+                    <p>VIEWS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="share-links">
+                <ul class="list-inline">
+                  <li>
+                    <span>Share :
                     </span>
-                                    </li>
-                                    <li>
-                                        <a class="fb" href="#">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="twi" href="#">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="gp" href="#">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="pin" href="#">
-                                            <i class="fa fa-pinterest"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="env" href="#">
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="love-blog-image">
-                                <img alt="" ng-src="{{article.image|serverimage}}" />
-                            </div>
-                            <div class="love-blog-detail text-justify">
-                                <p ng-bind="article.desc"></p>
-                            </div>
-                            <div class="other-links">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="clearfix share-social-links">
-                                            <div class="pull-left">
-                                                <ul class="list-inline">
-                                                    <li>
-                                                        <span>Share :
-                          </span>
-                                                    </li>
-                                                    <li>
-                                                        <a class="fb" href="#">
-                                                            <i class="fa fa-facebook"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="twi" href="#">
-                                                            <i class="fa fa-twitter"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="gp" href="#">
-                                                            <i class="fa fa-google-plus"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="pin" href="#">
-                                                            <i class="fa fa-pinterest"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="env" href="#">
-                                                            <i class="fa fa-envelope"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="clearfix">
-                                            <div class="pull-right">
-                                                <a href="#/lovedetail/{{article.prev}}" ng-if="article.prev" class="btn color-me btn-pink" type="button">
-                                                    <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
-                                                <a href="#/lovedetail/{{article.next}}" ng-if="article.next" class="btn color-me btn-pink" type="button">Next Story
+                  </li>
+                  <li>
+                    <a class="fb" href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="twi" href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="gp" href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pin" href="#">
+                      <i class="fa fa-pinterest"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="env" href="#">
+                      <i class="fa fa-envelope"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="love-blog-image">
+                <img alt="" ng-src="{{article.image|serverimage}}" />
+              </div>
+              <div class="love-blog-detail text-justify">
+                <p ng-bind="article.desc"></p>
+              </div>
+              <div class="other-links">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                    <div class="clearfix share-social-links">
+                      <div class="pull-left">
+                        <ul class="list-inline">
+                          <li>
+                            <span>Share :
+                            </span>
+                          </li>
+                          <li>
+                            <a class="fb" href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="twi" href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="gp" href="#">
+                              <i class="fa fa-google-plus"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="pin" href="#">
+                              <i class="fa fa-pinterest"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="env" href="#">
+                              <i class="fa fa-envelope"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="clearfix">
+                      <div class="pull-right">
+                        <a href="#/lovedetail/{{article.prev}}" ng-if="article.prev" class="btn color-me btn-pink" type="button">
+                          <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
+                        <a href="#/lovedetail/{{article.next}}" ng-if="article.next" class="btn color-me btn-pink" type="button">Next Story
                             <i class="fa fa-chevron-right i-right"></i>
                           </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="most-viewed-2 borderme">
-                                <h1 class="gray-dark">RECOMMENDED</h1>
-                                <ul>
-                                    <li ng-repeat="recommed in recommended">
-                                        <a href="#/lovedetail/{{recommed.id}}">
-                                            <figure>
-                                                <div class="img-holder">
-                                                    <img alt="" ng-src="{{recommed.image|serverimage}}" />
-                                                </div>
-                                                <figcaption class="brand-black">{{recommed.title}}</figcaption>
-                                            </figure>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="most-viewed-2 borderme">
+                <h1 class="gray-dark">RECOMMENDED</h1>
+                <ul>
+                  <li ng-repeat="recommed in recommended">
+                    <a href="#/lovedetail/{{recommed.id}}">
+                      <figure>
+                        <div class="img-holder">
+                          <img alt="" ng-src="{{recommed.image|serverimage}}" />
+                        </div>
+                        <figcaption class="brand-black">{{recommed.title}}</figcaption>
+                      </figure>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
 
-                    <div class="padding-right">
-                        <div class="row" ng-if="recommended.length == 0">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-9 col-sm-9">
-                                        <p class="brand-gray-lighter-2 blog-time">
-                                            {{article.timestamp|date}} by {{article.author}}
-                                        </p>
-                                        <h1 class="brand-pink title">{{article.title}}</h1>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3">
-                                        <div class="shares brand-gray-lighter-2">
-                                            <h2>{{article.views}}</h2>
-                                            <p>VIEWS</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="share-links">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <span>Share :
-                        </span>
-                                        </li>
-                                        <li>
-                                            <a class="fb" href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twi" href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="gp" href="#">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="pin" href="#">
-                                                <i class="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="env" href="#">
-                                                <i class="fa fa-envelope"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="love-blog-image">
-                                    <img alt="" ng-src="{{article.image|serverimage}}" />
-                                </div>
-                                <div class="love-blog-detail text-justify">
-                                    <p ng-bind-html="article.desc"></p>
-                                </div>
-                                <div class="other-links">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="share-social-links">
-                                                <ul class="list-inline">
-                                                    <li>
-                                                        <span>Share :
-                              </span>
-                                                    </li>
-                                                    <li>
-                                                        <a class="fb" href="#">
-                                                            <i class="fa fa-facebook"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="twi" href="#">
-                                                            <i class="fa fa-twitter"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="gp" href="#">
-                                                            <i class="fa fa-google-plus"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="pin" href="#">
-                                                            <i class="fa fa-pinterest"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="env" href="#">
-                                                            <i class="fa fa-envelope"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="clearfix">
-                                                <div class="pull-right">
-                                                    <a href="#/lovedetail/{{article.prev}}" ng-if="article.prev" class="btn color-me btn-pink" type="button">
-                                                        <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
-                                                    <a href="#/lovedetail/{{article.next}}" ng-if="article.next" class="btn color-me btn-pink" type="button">Next Story
+          <div class="padding-right">
+            <div class="row" ng-if="recommended.length == 0">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-9 col-sm-9">
+                    <p class="brand-gray-lighter-2 blog-time">
+                      {{article.timestamp|date}} by {{article.author}}
+                    </p>
+                    <h1 class="brand-pink title">{{article.title}}</h1>
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                    <div class="shares brand-gray-lighter-2">
+                      <h2>{{article.views}}</h2>
+                      <p>VIEWS</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="share-links">
+                  <ul class="list-inline">
+                    <li>
+                      <span>Share :
+                      </span>
+                    </li>
+                    <li>
+                      <a class="fb" href="#">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="twi" href="#">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="gp" href="#">
+                        <i class="fa fa-google-plus"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="pin" href="#">
+                        <i class="fa fa-pinterest"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="env" href="#">
+                        <i class="fa fa-envelope"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="love-blog-image">
+                  <img alt="" ng-src="{{article.image|serverimage}}" />
+                </div>
+                <div class="love-blog-detail text-justify">
+                  <p ng-bind-html="article.desc"></p>
+                </div>
+                <div class="other-links">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="share-social-links">
+                        <ul class="list-inline">
+                          <li>
+                            <span>Share :
+                            </span>
+                          </li>
+                          <li>
+                            <a class="fb" href="#">
+                              <i class="fa fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="twi" href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="gp" href="#">
+                              <i class="fa fa-google-plus"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="pin" href="#">
+                              <i class="fa fa-pinterest"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="env" href="#">
+                              <i class="fa fa-envelope"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="clearfix">
+                        <div class="pull-right">
+                          <a href="#/lovedetail/{{article.prev}}" ng-if="article.prev" class="btn color-me btn-pink" type="button">
+                            <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
+                          <a href="#/lovedetail/{{article.next}}" ng-if="article.next" class="btn color-me btn-pink" type="button">Next Story
                                 <i class="fa fa-chevron-right i-right"></i>
                               </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                      </div>
                     </div>
-
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </section>
