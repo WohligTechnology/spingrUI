@@ -9,9 +9,12 @@ var jsArray = [
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
   './bower_components/ui-router/release/angular-ui-router.min.js',
   './bower_components/angular-flexslider/angular-flexslider.js',
+  './bower_components/moment/min/moment.min.js',
+  './bower_components/lodash/lodash.min.js',
+
   './js/app.js',
   './js/controllers.js',
-  './js/templateservice.js', 
+  './js/templateservice.js',
   './js/navigation.js',
 
   //please do not change it
@@ -279,5 +282,5 @@ gulp.task('development', ["sass:development", "watch:all"]);
 gulp.task('minifyhtml', ["minify:indexHTML", "minify:views", "templatecache"]);
 gulp.task('copy', ["copy:img", "copy:fonts"]);
 
-
-gulp.task('production', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', ["minify:css", "templatecache"], 'clean:tmp', "concat:js", 'clean:tmp', "uglify:js", 'clean:tmp', "inlinesource", 'clean:tmp', "gzipfile", 'clean:tmp', 'clean:tmp', "zip"));
+gulp.task('production', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', ["minify:css", "templatecache"], "concat:js", 'clean:tmp', "uglify:js", 'clean:tmp', "inlinesource", 'clean:tmp', "gzipfile", 'clean:tmp', 'clean:tmp', "zip"));
+gulp.task('production2', gulpSequence(["copy:img", "copy:fonts", "sass:production", "minify:indexproduction", "minify:views"], 'clean:tmp', ["minify:css", "templatecache"], "concat:js", 'clean:tmp', "uglify:js", 'clean:tmp', "inlinesource", 'clean:tmp', "copy:indexhtml", 'clean:tmp', 'clean:tmp', "zip"));
