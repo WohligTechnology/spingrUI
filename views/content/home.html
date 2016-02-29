@@ -23,12 +23,12 @@
                 <div class="row" ng-repeat="goops in allCategory[7]">
                   <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="img-hold">
-                      <img alt="" ng-src={{goops.image|serverimage}} class="goops-img" src="img/post1.jpg"/>
+                      <a ui-sref="goops"><img alt="" ng-src={{goops.image|serverimage}} class="goops-img" src="img/post1.jpg"/></a>
                     </div>
                   </div>
                   <div class="col-md-10 col-sm-10 col-xs-10">
                     <div class="goops-detail brand-gray-darker-bg gray-lighter">
-                      <p ng-bind="goops.title">
+                      <p ng-bind="goops.title" class="pointer" ui-sref="goops">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
                       </p>
                     </div>

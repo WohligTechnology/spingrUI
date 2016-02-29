@@ -173,6 +173,7 @@ $space-100: 100px;
 .goops-btn {
   background-color: $brand-blue-darker;
 }
+.pointer { cursor: pointer; }
 
 .btn {
     height: 30px;
@@ -714,7 +715,7 @@ header {
 .img-hold {
     width: $space-100 * 1.4;
     height: 90px;
-    margin-left: -40px;
+    margin: -10px 0 15px -40px;
     position: relative;
     img {
         padding: 7px 0;
@@ -1155,6 +1156,9 @@ footer {
         color: $body-bg;
         &:hover {
             color: $brand-pink;
+        }
+        &:focus {
+          color: $brand-pink;
         }
     }
     .footer-menus,
