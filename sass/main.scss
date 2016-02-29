@@ -17,6 +17,7 @@ $brand-green-neon: #2bc900;
 $brand-pink: #f02b67;
 $brand-green: #0fff3c;
 $brand-yellow: #ffae00;
+$brand-yellow-lust : #ffba00;
 $brand-gray: #323232;
 $brand-gray-lighter: #606060;
 $brand-gray-lighter-2: #969696;
@@ -206,6 +207,9 @@ $space-100: 100px;
     $brand-green-neon,
     $brand-green-neon);
 }
+.btn-yellow-lust {
+  @include button-variant(white, $brand-yellow, $brand-yellow);
+}
 
 .btn-red {
     @include button-variant(white,
@@ -338,9 +342,26 @@ img.doneLoading {
             border: 5px solid $brand-green;
         }
     }
-    .most-viewed { border: 5px solid $brand-green !important; }
+    // .most-viewed { border: 5px solid $brand-green !important; }
 }
-
+// lust-page-color
+.put-me-lust {
+    .title {
+        color: $brand-yellow-lust;
+    }
+    .borderme {
+        border: 5px solid $brand-yellow-lust !important;
+    }
+    .color-me {
+        @extend.btn-yellow-lust;
+    }
+    .border-me-hov {
+        &:hover:after {
+            border: 5px solid $brand-yellow-lust;
+        }
+    }
+    // .most-viewed { border: 5px solid $brand-yellow !important; }
+}
 //confession-page
 .put-me-confess {
     .color-me {
