@@ -32,20 +32,23 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   })
 
   .state('lovedetail', {
-      url: "/lovedetail/:id",
-      templateUrl: "views/template.html",
-      controller: 'LoveDetailCtrl'
-    })
+    url: "/lovedetail/:id",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  })
+
   .state('liedetail', {
-      url: "/liedetail/:id",
-      templateUrl: "views/template.html",
-      controller: 'LoveDetailCtrl'
-    })
+    url: "/liedetail/:id",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  })
+
   .state('aboutus', {
-      url: "/aboutus",
-      templateUrl: "views/template.html",
-      controller: 'AboutusCtrl'
-    })
+    url: "/aboutus",
+    templateUrl: "views/template.html",
+    controller: 'AboutusCtrl'
+  })
+
   .state('lie', {
     url: "/lie",
     templateUrl: "views/template.html",
@@ -55,47 +58,69 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   .state('confessions', {
     url: "/confessions",
     templateUrl: "views/template.html",
-    controller: 'ConfessionsCtrl'
+    controller: 'LoveCtrl'
   })
 
   .state('confessiondetail', {
-      url: "/confessiondetail",
-      templateUrl: "views/template.html",
-      controller: 'ConfessionDetailCtrl'
-    })
-    .state('sexpert', {
-      url: "/sexpert",
-      templateUrl: "views/template.html",
-      controller: 'ConfessionsCtrl'
-    })
-    .state('sexpertdetail', {
-      url: "/sexpertdetail",
-      templateUrl: "views/template.html",
-      controller: 'ConfessionDetailCtrl'
-    })
+    url: "/confessiondetail",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  })
+
+  .state('sexpert', {
+    url: "/sexpert",
+    templateUrl: "views/template.html",
+    controller: 'LoveCtrl'
+  })
+
+  .state('sexpertdetail', {
+    url: "/sexpertdetail",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  })
 
   .state('queries', {
-      url: "/queries",
-      templateUrl: "views/template.html",
-      controller: 'ConfessionsCtrl'
-    })
-    .state('queriesdetail', {
-      url: "/queriesdetail",
-      templateUrl: "views/template.html",
-      controller: 'ConfessionDetailCtrl'
-    })
-    .state('lust', {
-      url: "/lust",
-      templateUrl: "views/template.html",
-      controller: 'LoveCtrl'
-    })
+    url: "/queries",
+    templateUrl: "views/template.html",
+    controller: 'LoveCtrl'
+  })
+
+  .state('queriesdetail', {
+    url: "/queriesdetail",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  })
+
+  .state('goops', {
+    url: "/goops",
+    templateUrl: "views/template.html",
+    controller: 'LoveCtrl'
+  })
+
+  .state('goopsdetail', {
+    url: "/goopsdetail",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  })
+
+  .state('lust', {
+    url: "/lust",
+    templateUrl: "views/template.html",
+    controller: 'LoveCtrl'
+  })
+
+  .state('lustdetail', {
+    url: "/lust",
+    templateUrl: "views/template.html",
+    controller: 'LoveDetailCtrl'
+  });
 
   $urlRouterProvider.otherwise("/home");
 
 });
 firstapp.filter('serverimage', function() {
   return function(image) {
-    if (image && image != null) {
+    if (image && image !== null) {
       return adminUrl + "uploads/" + image;
     } else {
       return "img/default.png";
