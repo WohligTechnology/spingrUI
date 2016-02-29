@@ -16,7 +16,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.allCategory[parseInt(data.category.id)] = data.article;
   }
 
-  for (var i = 6; i < 7; i++) {
+  for (var i = 0; i < 7; i++) {
     $scope.allCategory.push([]);
     NavigationService.getCategoryArticles(i + 1, getArticles);
   }

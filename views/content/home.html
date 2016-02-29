@@ -50,14 +50,14 @@
               <div class="col-md-4 scroll-me">
                 <h1 class="border-blue">CONFESSIONS</h1>
                 <div class="slider">
-                  <div class="elements" ng-repeat="article in allCategory">
+                  <div class="elements" ng-repeat="article in allCategory[4]">
                     <!-- <h2 class="brand-blue">#51</h2> -->
                     <p ng-bind-html="article.desc">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div class="extra brand-gray-lighter-2">
                       <button class="pull-right btn-null">READ MORE</button>
-                      By Anonymous | 1 day ago</div>
+                      By {{allCategory[4].author}} | {{allCategory[4].timestamp|date}}</div>
                   </div>
                 </div>
                 <div class="more-button">
@@ -69,22 +69,22 @@
               <div class="col-md-4 scroll-me">
                 <h1 class="border-green">ASK THE SEXPERT</h1>
                 <div class="slider">
-                  <div class="elements-2 gray-base">
+                  <div class="elements-2 gray-base" ng-repeat="article in allCategory[5]">
+                    <p ng-bind-html="article.desc">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <div class="extra brand-gray-lighter-2">
+                      <button class="pull-right btn-null">READ MORE</button>
+                      By {{allCategory[5].author}} | {{allCategory[5].timestamp|date}}</div>
+                  </div>
+                  <!-- <div class="elements-2 gray-base">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div class="extra brand-gray-lighter-2">
                       <button class="pull-right btn-null">READ MORE</button>
                       By Anonymous | 1 day ago</div>
-                  </div>
-                  <div class="elements-2 gray-base">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="extra brand-gray-lighter-2">
-                      <button class="pull-right btn-null">READ MORE</button>
-                      By Anonymous | 1 day ago</div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="more-button">
                   <a href="#/sexpert">
@@ -95,22 +95,22 @@
               <div class="col-md-4 scroll-me">
                 <h1 class="border-red">LOVE QUERIES</h1>
                 <div class="slider">
-                  <div class="elements-2 gray-base">
+                  <div class="elements-2 gray-base" ng-repeat="article in allCategory[6]">
+                    <p ng-bind-html="article.desc">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <div class="extra brand-gray-lighter-2">
+                      <button class="pull-right btn-null">READ MORE</button>
+                      By {{allCategory[6].author}} | {{allCategory[6].timestamp|date}}</div>
+                  </div>
+                  <!-- <div class="elements-2 gray-base">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div class="extra brand-gray-lighter-2">
                       <button class="pull-right btn-null">READ MORE</button>
                       By Anonymous | 1 day ago</div>
-                  </div>
-                  <div class="elements-2 gray-base">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="extra brand-gray-lighter-2">
-                      <button class="pull-right btn-null">READ MORE</button>
-                      By Anonymous | 1 day ago</div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="more-button">
                   <a href="#/queries">

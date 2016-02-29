@@ -20,7 +20,7 @@
         </div>
         <div class="content-hover text-center">
           <div class="fifty">
-            <p class="quote text-uppercase" ng-bind="allCategory[1][0].title"></p>
+            <p class="quote hov-love text-uppercase" ng-bind="allCategory[1][0].title"></p>
             <p class="l3-date">
               {{allCategory[1][0].timestamp2|date}}
               by
@@ -44,8 +44,10 @@
         </div>
         <div class="content-hover text-center">
           <div class="fifty">
-            <p class="quote text-uppercase" ng-bind="allCategory[1][1].title"></p>
-            <p class="l3-date">{{allCategory[1][1].timestamp2|date}}</p>
+            <p class="quote hov-love text-uppercase" ng-bind="allCategory[1][1].title"></p>
+            <p class="l3-date">{{allCategory[1][1].timestamp2|date}}
+            by
+            {{allCategory[1][1].author}}</p>
             <a href="#/love">
               <button class="btn btn-gray" type="button">Read more</button>
             </a>
@@ -59,11 +61,24 @@
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p ng-bind-bind="allCategory[1][0].desc">“Have you done it yet?” the text message said. “No. I’m in class” she replied. “How does it feel?” “I said, I haven’t done it yet” “Ohh sorry, just got your messages. Are you planning on it?” “No. Not yet…haven’t thought about it” “Come home this Sunday”...</p>
+            <p ng-bind-html="allCategory[2][0].desc">“Have you done it yet?” the text message said. “No. I’m in class” she replied. “How does it feel?” “I said, I haven’t done it yet” “Ohh sorry, just got your messages. Are you planning on it?” “No. Not yet…haven’t thought about it” “Come home this Sunday”...</p>
           </div>
           <div class="content-2 lie-text-1">
-            <p class="brand-green" ng-bind="allCategory[1][0].title">“Have you done it yet?” the text message said.
+            <p class="brand-green" ng-bind="allCategory[2][0].title">“Have you done it yet?” the text message said.
             </p>
+          </div>
+        </div>
+        <div class="content-hover text-center">
+          <div class="fifty">
+            <p class="quote  hov-lie text-uppercase" ng-bind="allCategory[2][0].title">Love for To ,
+              <span>please</span>
+            </p>
+            <p class="l3-date">{{allCategory[2][0].timestamp2|date}}
+            by
+            {{allCategory[2][0].author}}</p>
+            <a href="#/love">
+              <button class="btn btn-gray" type="button">Read more</button>
+            </a>
           </div>
         </div>
       </div>
@@ -79,10 +94,23 @@
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p>“Oh my…aaahh God Saavi!” Aaditya moaned as he climaxed. He lied down beside Raashi, kissed her on the cheek and passed out there. This was the third time in a row he’d taken that name while making love to his wife. Raashi took his hand off herself and got up. She put on a robe and went into the study. “He did it again tonight” she texted Meera. “Why don’t you just ask him” Meera replied. “He doesn’t remember. He used to say other things when…you know when. But next day when I used to tease him, he wouldn’t..</p>
+            <p ng-bind-html="allCategory[2][1].desc">“Oh my…aaahh God Saavi!” Aaditya moaned as he climaxed. He lied down beside Raashi, kissed her on the cheek and passed out there. This was the third time in a row he’d taken that name while making love to his wife. Raashi took his hand off herself and got up. She put on a robe and went into the study. “He did it again tonight” she texted Meera. “Why don’t you just ask him” Meera replied. “He doesn’t remember. He used to say other things when…you know when. But next day when I used to tease him, he wouldn’t..</p>
           </div>
           <div class="content-2 lie-text-2">
-            <p class="brand-green">“Oh my…aaahh God Saavi!” Aaditya moaned as he climaxed.</p>
+            <p class="brand-green" ng-bind="allCategory[2][1].title">“Oh my…aaahh God Saavi!” Aaditya moaned as he climaxed.</p>
+          </div>
+        </div>
+        <div class="content-hover text-center">
+          <div class="fifty">
+            <p class="quote text-uppercase hov-lie" ng-bind="allCategory[2][1].title">Love for To ,
+              <span>please</span>
+            </p>
+            <p class="l3-date">{{allCategory[2][1].timestamp2|date}}
+            by
+            {{allCategory[2][1].author}}</p>
+            <a href="#/love">
+              <button class="btn btn-gray" type="button">Read more</button>
+            </a>
           </div>
         </div>
       </div>
@@ -93,12 +121,25 @@
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p>“C’mon, out with it” Tina said giggling, to Vaidehi. They were college friends, meeting after almost 10 years. But the moment they met, it seemed like no time had passed between them. Now at a bar, they were buzzed on margaritas. “I’d say may be a couple of months ago” Vaidehi replied...
+            <p ng-bind-html="allCategory[3][0].desc">“C’mon, out with it” Tina said giggling, to Vaidehi. They were college friends, meeting after almost 10 years. But the moment they met, it seemed like no time had passed between them. Now at a bar, they were buzzed on margaritas. “I’d say may be a couple of months ago” Vaidehi replied...
             </p>
           </div>
           <div class="content-2 lust-text-1">
-            <p class="brand-yellow">“Oh c’mon! We aren’t in college anymore!”
+            <p class="brand-yellow"  ng-bind="allCategory[3][0].title">“Oh c’mon! We aren’t in college anymore!”
             </p>
+          </div>
+        </div>
+        <div class="content-hover text-center">
+          <div class="fifty">
+            <p class="quote hov-lust text-uppercase" ng-bind="allCategory[3][0].title">Lust for To ,
+              <span>please</span>
+            </p>
+            <p class="l3-date">{{allCategory[3][0].timestamp2|date}}
+            by
+            {{allCategory[3][0].author}}</p>
+            <a href="#/love">
+              <button class="btn btn-gray" type="button">Read more</button>
+            </a>
           </div>
         </div>
       </div>
@@ -107,10 +148,23 @@
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p>“Thanks and bye!” a drunken Mansi said to Yash as they reached her hostel room. “Can’t I…talk to you?” Yash replied and Mansi could see in his eyes that he genuinely wanted to talk…the thing with Yash was, even his eyes lied. “There’s nothing to talk about.” Mansi replied. “Of course there is! We’re meeting after a year. You didn't even tell me about your engagement” he said, looking at her ring. “That just means you’re not important.” ...</p>
+            <p ng-bind-bind="allCategory[3][1].desc">“Thanks and bye!” a drunken Mansi said to Yash as they reached her hostel room. “Can’t I…talk to you?” Yash replied and Mansi could see in his eyes that he genuinely wanted to talk…the thing with Yash was, even his eyes lied. “There’s nothing to talk about.” Mansi replied. “Of course there is! We’re meeting after a year. You didn't even tell me about your engagement” he said, looking at her ring. “That just means you’re not important.” ...</p>
           </div>
           <div class="content-2 lust-text-2">
-            <p class="brand-yellow">“Yash please” she said, a little breathless.</p>
+            <p class="brand-yellow" ng-bind="allCategory[3][1].title">“Yash please” she said, a little breathless.</p>
+          </div>
+        </div>
+        <div class="content-hover text-center">
+          <div class="fifty">
+            <p class="quote hov-lust text-uppercase" ng-bind="allCategory[3][1].title">Love for To ,
+              <span>please</span>
+            </p>
+            <p class="l3-date">{{allCategory[3][1].timestamp2|date}}
+            by
+            {{allCategory[3][1].author}}</p>
+            <a href="#/love">
+              <button class="btn btn-gray" type="button">Read more</button>
+            </a>
           </div>
         </div>
       </div>

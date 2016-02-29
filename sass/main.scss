@@ -280,6 +280,9 @@ $space-100: 100px;
     color: white;
     border-radius: 50%;
 }
+.hov-love { color:$brand-pink;  }
+.hov-lie { color: $brand-green; }
+.hov-lust { color: $brand-yellow-lust; }
 
 body {
     //padding-top: 70px;
@@ -481,6 +484,8 @@ nav li:hover .dropdown-menu {
         overflow: hidden;
         .content-holder {
             .content-1 {
+              height: 245px;
+              overflow: hidden;
                 p {
                     font-size: 12px;
                     line-height: 20px;
@@ -561,7 +566,7 @@ nav li:hover .dropdown-menu {
             .fifty {
                 p.quote {
                     font-size: 30px;
-                    @extend .brand-pink;
+                    // @extend .brand-pink;
                     letter-spacing: 1px;
                     word-spacing: 6px;
                     span {
