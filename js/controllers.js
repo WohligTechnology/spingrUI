@@ -167,7 +167,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   function doneCallback(data) {
     $scope.form.done = true;
     if (data.value) {
-      $scope.form.complete = "Thank you for Subsribing.";
+      $scope.form.complete = "Thank you for Subscribing.";
     } else {
       $scope.form.complete = "Email id is already Subscribed.";
     }
