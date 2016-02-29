@@ -31,8 +31,8 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'LoveCtrl'
   })
 
-  .state('lovedetail', {
-    url: "/lovedetail/:id",
+  .state('detail', {
+    url: "/detail/:id",
     templateUrl: "views/template.html",
     controller: 'LoveDetailCtrl'
   })

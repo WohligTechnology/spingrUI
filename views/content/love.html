@@ -9,13 +9,13 @@
                 <div class="row">
                   <div class="col-md-4 col-sm-4">
                     <div class="post-image bdhov border-me-hov">
-                      <a href="#/lovedetail/{{love.id}}">
+                      <a ui-sref="detail({id:love.id})">
                         <img ng-src="{{love.image|serverimage}}" alt="" />
                       </a>
                     </div>
                   </div>
                   <div class="col-md-8 col-sm-8">
-                    <a href="#/lovedetail/{{love.id}}">
+                    <a ui-sref="detail({id:love.id})">
                       <div class="post-details brand-gray-lighter">
                         <h3 class="brand-black">{{love.title}}</h3>
                         <p>{{love.timestamp|date}} by {{love.author}}</p>
@@ -31,7 +31,7 @@
                 <h1 class="gray-dark">MOST VIEWED</h1>
                 <ul>
                   <li ng-repeat="most in viewed track by $index">
-                    <a href="#/lovedetail">
+                    <a ui-sref="detail({id:most.id})">
                       <figure>
                         <div class="img-holder">
                           <img ng-src="{{most.image|serverimage}}" alt="" class="img-reponsive">
