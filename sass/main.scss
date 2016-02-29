@@ -169,6 +169,9 @@ $space-100: 100px;
 .sexpage-btn {
     background-color: $sex-color;
 }
+.goops-btn {
+  background-color: $brand-blue-darker;
+}
 
 .btn {
     height: 30px;
@@ -193,6 +196,9 @@ $space-100: 100px;
     @include button-variant(white,
     $brand-blue,
     $brand-blue);
+}
+.btn-dark-blue {
+  @include button-variant(white, $brand-blue-darker, $brand-blue-darker);
 }
 
 .btn-green {
@@ -332,6 +338,7 @@ img.doneLoading {
             border: 5px solid $brand-green;
         }
     }
+    .most-viewed { border: 5px solid $brand-green !important; }
 }
 
 //confession-page
@@ -367,6 +374,25 @@ img.doneLoading {
             background-color: #9702ec;
         }
     }
+}
+
+// goops-page
+.put-me-goops {
+    .title {
+        color: $brand-blue-darker;
+    }
+    .borderme {
+        border: 5px solid $brand-blue-darker !important;
+    }
+    .color-me {
+        @extend.btn-dark-blue;
+    }
+    .border-me-hov {
+        &:hover:after {
+            border: 5px solid $brand-blue-darker;
+        }
+    }
+    .most-viewed { border: 5px solid $brand-blue-darker !important; }
 }
 
 ul {
