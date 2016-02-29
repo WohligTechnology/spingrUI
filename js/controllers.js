@@ -24,10 +24,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
   $scope.footercolor = "black";
 
-  console.log();
-
-
-
   function getArticles(data) {
     $scope.catColor = TemplateService.getheader(data.category.id);
     console.log(data);
@@ -38,7 +34,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
     $scope.viewed = data.mostViewed;
   }
-
 
   switch ($location.path()) {
     case "/love":
