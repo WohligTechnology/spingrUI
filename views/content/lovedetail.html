@@ -57,7 +57,7 @@
                 <img alt="" ng-src="{{article.image|serverimage}}" />
               </div>
               <div class="love-blog-detail text-justify">
-                <p ng-bind="article.desc"></p>
+                <p ng-bind-html="article.desc"></p>
               </div>
               <div class="other-links">
                 <div class="row">

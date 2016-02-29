@@ -20,43 +20,15 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="row">
+                <div class="row" ng-repeat="goops in allCategory[7]">
                   <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="img-hold">
-                      <img alt="" class="goops-img" src="img/post1.jpg"/>
+                      <img alt="" ng-src={{goops.image|serverimage}} class="goops-img" src="img/post1.jpg"/>
                     </div>
                   </div>
                   <div class="col-md-10 col-sm-10 col-xs-10">
                     <div class="goops-detail brand-gray-darker-bg gray-lighter">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-2 col-sm-2 col-xs-2">
-                    <div class="img-hold">
-                      <img alt="" class="goops-img" src="img/post2.jpg"/>
-                    </div>
-                  </div>
-                  <div class="col-md-10 col-sm-10 col-xs-10">
-                    <div class="goops-detail brand-gray-darker-bg brand-white">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-2 col-sm-2 col-xs-2">
-                    <div class="img-hold">
-                      <img alt="" class="goops-img" src="img/post3.jpg"/>
-                    </div>
-                  </div>
-                  <div class="col-md-10 col-sm-10 col-xs-10">
-                    <div class="goops-detail brand-gray-darker-bg brand-white">
-                      <p>
+                      <p ng-bind="goops.title">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
                       </p>
                     </div>
@@ -78,27 +50,9 @@
               <div class="col-md-4 scroll-me">
                 <h1 class="border-blue">CONFESSIONS</h1>
                 <div class="slider">
-                  <div class="elements">
-                    <h2 class="brand-blue">#51</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="extra brand-gray-lighter-2">
-                      <button class="pull-right btn-null">READ MORE</button>
-                      By Anonymous | 1 day ago</div>
-                  </div>
-                  <div class="elements">
-                    <h2 class="brand-blue">#52</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="extra brand-gray-lighter-2">
-                      <button class="pull-right btn-null">READ MORE</button>
-                      By Anonymous | 1 day ago</div>
-                  </div>
-                  <div class="elements">
-                    <h2 class="brand-blue">#53</h2>
-                    <p>
+                  <div class="elements" ng-repeat="article in allCategory">
+                    <!-- <h2 class="brand-blue">#51</h2> -->
+                    <p ng-bind-html="article.desc">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div class="extra brand-gray-lighter-2">

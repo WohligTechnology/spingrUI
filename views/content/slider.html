@@ -7,23 +7,24 @@
         </a>
       </div>
     </div>
+
     <div class="col-flex bg-1">
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p>Sophia sat on the floor of her laundry room, looking at the lipstick mark on Peter’s shirt. She brought it up to her face to smell it. The way their smells mingled made her head dizzy. It was no secret there was another woman. He’d not cheated. Soon as he was sure, he had confessed. Of course there was shouting, crying, going silent and all those things, but she’d agreed, on one single thread. The way Peter had told her that he still loved her as much as before and how she could see in...</p>
+            <p ng-bind-html="allCategory[1][0].desc"></p>
           </div>
           <div class="content-2 love-text-1">
-            <p class="brand-pink">“I saw this lipstick mark on your shirt…”
-            </p>
+            <p class="brand-pink" ng-bind="allCategory[1][0].title"></p>
           </div>
         </div>
         <div class="content-hover text-center">
           <div class="fifty">
-            <p class="quote text-uppercase">Love for To ,
-              <span>please</span>
-            </p>
-            <p class="l3-date">March 13, 2015 By LLL</p>
+            <p class="quote text-uppercase" ng-bind="allCategory[1][0].title"></p>
+            <p class="l3-date">
+              {{allCategory[1][0].timestamp2|date}}
+              by
+              {{allCategory[1][0].author}}</p>
             <a href="#/love">
               <button class="btn btn-gray" type="button">Read more</button>
             </a>
@@ -35,20 +36,16 @@
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p>The four month old bride was lying on her creaky bed, tossing and turning, not awake but not asleep either. Since he’d left, this is what sleeping had become, hanging somewhere in-between, in an uncomfortable state of trance. She’d seen him last on their wedding night. His first love had called and he’d left, kissing her goodbye, promising to return. She watched him walk out, that handsome, well-built man in a uniform...</p>
+            <p ng-bind-html="allCategory[1][1].desc"></p>
           </div>
           <div class="content-2 love-text-2">
-            <p class="brand-pink">She’d seen
-              <span>him last</span>
-              on their wedding night.</p>
+            <p class="brand-pink" ng-bind="allCategory[1][1].title"></p>
           </div>
         </div>
         <div class="content-hover text-center">
           <div class="fifty">
-            <p class="quote text-uppercase">Love for To ,
-              <span>please</span>
-            </p>
-            <p class="l3-date">March 13, 2015 By LLL</p>
+            <p class="quote text-uppercase" ng-bind="allCategory[1][1].title"></p>
+            <p class="l3-date">{{allCategory[1][1].timestamp2|date}}</p>
             <a href="#/love">
               <button class="btn btn-gray" type="button">Read more</button>
             </a>
@@ -62,10 +59,10 @@
       <div class="slide-part">
         <div class="content-holder">
           <div class="content-1">
-            <p>“Have you done it yet?” the text message said. “No. I’m in class” she replied. “How does it feel?” “I said, I haven’t done it yet” “Ohh sorry, just got your messages. Are you planning on it?” “No. Not yet…haven’t thought about it” “Come home this Sunday”...</p>
+            <p ng-bind-bind="allCategory[1][0].desc">“Have you done it yet?” the text message said. “No. I’m in class” she replied. “How does it feel?” “I said, I haven’t done it yet” “Ohh sorry, just got your messages. Are you planning on it?” “No. Not yet…haven’t thought about it” “Come home this Sunday”...</p>
           </div>
           <div class="content-2 lie-text-1">
-            <p class="brand-green">“Have you done it yet?” the text message said.
+            <p class="brand-green" ng-bind="allCategory[1][0].title">“Have you done it yet?” the text message said.
             </p>
           </div>
         </div>
@@ -73,7 +70,7 @@
     </div>
     <div class="col-flex">
       <div class="slide-part nopd">
-        <a href="#/love">
+        <a href="#/lie">
           <div class="content-holder lie-back"></div>
         </a>
       </div>

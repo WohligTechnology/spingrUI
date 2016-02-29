@@ -7,6 +7,19 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   $scope.footercolor = "";
+  $scope.allCategory = [[]];
+  function getArticles(data) {
+    console.log(data.category.id);
+    _.each(data.article, function(n) {
+      n.timestamp2 = moment(n.timestamp).toDate();
+    });
+    $scope.allCategory[parseInt(data.category.id)] = data.article;
+  }
+
+  for (var i = 6; i < 7; i++) {
+    $scope.allCategory.push([]);
+    NavigationService.getCategoryArticles(i + 1, getArticles);
+  }
 
   $scope.mySlides = [
     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
