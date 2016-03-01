@@ -1130,6 +1130,7 @@ header {
         padding-bottom: $space-100 / 4;
         font-weight: 500;
         border-bottom: 2px solid $gray-base;
+        p { margin: 0 0 10px; }
     }
     .other-links {
         margin-top: 40px;
