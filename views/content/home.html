@@ -20,7 +20,7 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="row" ng-repeat="goops in allCategory[7]">
+                <div class="row" ng-repeat="goops in allCategory[7]"  ng-if="$index <3">
                   <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="img-hold">
                       <a ui-sref="goops"><img alt="" ng-src={{goops.image|serverimage}} class="goops-img" src="img/post1.jpg"/></a>
