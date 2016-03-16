@@ -1,23 +1,41 @@
 <section class="brand-gray-bg">
-    <div class="container">
+    <div class="container"  ng-class="catColor">
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <div class="content-main">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="blog-content" ng-repeat="blog in sexpertblog">
-                                <a href="#/sexpertdetail "><p class="brand-gray dark">{{blog.content}}</p>
+                            <div class="blog-content" ng-repeat="blog in loveblog track by $index">
+                                <a ui-sref="detail({id:blog.id})"><p class="brand-gray dark">{{blog.title}}</p>
                                    </a>
-                                    <p class="ls">By Anonymous | 1 Day ago</p>
+                                      <p class="ls">{{blog.timestamp|date}} by {{blog.author}}</p>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="content-right">
+                            <div class="content-right" ng-if="catColor=='put-me-sexpert'">
                                 <div class="secret brand-gray">
                                     <h5><span>ask</span> the sexpert</h5>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
                                     <div class="text-center">
                                         <button type="button" class="btn sexpage-btn">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-right"  ng-if="catColor=='put-me-query'">
+                                <div class="secret brand-gray">
+                                    <h5><span>ask the </span> love guru</h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                    <div class="text-center">
+                                        <button type="button" class="btn query-btn">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-right" ng-if="catColor=='put-me-confess'">
+                                <div class="secret brand-gray">
+                                    <h5><span>Confess</span> your secrets</h5>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                                    <div class="text-center">
+                                        <button type="button" class="btn color-me btn-blue">Submit</button>
                                     </div>
                                 </div>
                             </div>

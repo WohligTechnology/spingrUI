@@ -399,6 +399,13 @@ img.doneLoading {
             background-color: #9702ec;
         }
     }
+    .title {
+      color: #323232;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 22px;
+    }
 }
 
 // goops-page
@@ -1133,7 +1140,7 @@ header {
         p { margin: 0 0 10px; }
     }
     .other-links {
-      margin: 40px 0;  
+      margin: 40px 0;
         .share-links-2 {
             display: table;
             @extend .trasform-50;

@@ -63,14 +63,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       break;
     case "/confessions":
       NavigationService.getCategoryArticles(4, getArticles);
+      $scope.template = TemplateService.changecontent("sexpert");
       console.log("confessions");
       break;
     case "/sexpert":
       NavigationService.getCategoryArticles(5, getArticles);
+      $scope.template = TemplateService.changecontent("sexpert");
       console.log("sexpert");
       break;
     case "/queries":
       NavigationService.getCategoryArticles(6, getArticles);
+      $scope.template = TemplateService.changecontent("sexpert");
       console.log("queries");
       break;
     case "/goops":
@@ -143,13 +146,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('LoveDetailCtrl', function($scope, TemplateService, NavigationService, $stateParams) {
   //Used to name the .html file
   function loadArticle(data) {
-    console.log(data);
     $scope.catColor = TemplateService.getheader(data.category.id);
+    if($scope.catColor == 'put-me-sexpert' || $scope.catColor == 'put-me-query' || $scope.catColor == 'put-me-confess') {
+      $scope.template = TemplateService.changecontent("sexpertdetail");
+      $scope.catColor = TemplateService.getheader(data.category.id);
+    }
     data.article.timestamp = moment(data.article.timestamp).toDate();
     $scope.article = data.article;
     $scope.article.next = data.next;
     $scope.article.prev = data.prev;
     $scope.recommended = data.recommended;
+    console.log($scope.template);
   }
   NavigationService.getArticle($stateParams.id, loadArticle);
   $scope.template = TemplateService.changecontent("lovedetail");
