@@ -65,7 +65,7 @@
             }
             .post-details {
                 line-height: 13px;
-                p + p {
+                p + .descp {
                     height: 40px;
                     margin: 7px 0 0;
                     font-size: 11px;
@@ -130,7 +130,7 @@
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
     header {
         nav.menu {
             ul {
@@ -218,9 +218,12 @@
             }
         }
     }
+    .goops-text {
+      position: static;
+    }
 }
 
-@media (max-width:900px) {
+@media (max-width:991px) {
     header {
         top: 75px;
     }
@@ -253,7 +256,7 @@
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 767px) {
     header {
         top: 60px;
         nav.menu {
@@ -331,9 +334,29 @@
             }
         }
     }
+    .over-lap {
+      padding: 0;
+      position: static;
+    }
+    .slide-me .bg-2 { display: none; }
+    .goops {
+      height: auto;
+      padding: 20px 0;
+      position: static;
+    }
+    .queries { margin: 0; }
+    .queries .inner-queries .more-button { text-align: left; }
+    .mobile-foot {
+      li { margin: 5px 30px; }
+    }
+    .post-image { margin: 0 auto; }
+    .post-details {
+      margin: 10px 0 25px;
+      text-align: center;
+    }
 }
 
-@media (max-width: 645px) {
+@media (max-width: 480px) {
     header {
         top: 50px;
         nav.menu {
@@ -403,5 +426,15 @@
                 letter-spacing: 5px;
             }
         }
+    }
+    .love-detail-main { padding: 20px 15px; }
+    .padding-right { padding: 0; }
+    // footer
+    .mobile-foot li { margin: 5px 15px; }
+    footer { padding: 20px 0; }
+    footer .social-links ul li a {
+      @include square(30px);
+      font-size: 18px;
+      line-height: 30px;
     }
 }

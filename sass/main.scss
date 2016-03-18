@@ -888,7 +888,7 @@ header {
             p {
                 font-size: 12px;
             }
-            p + p {
+            p + .descp {
                 color: $brand-gray;
                 height: 42px;
                 overflow: hidden;
@@ -916,7 +916,7 @@ header {
             li {
                 margin-top: 40px;
                 figure {
-                    margin-left: -20px;
+                    margin-left: -20px; 
                     width: 290px;
                     .img-holder {
                         width: 175px;
@@ -1440,4 +1440,4 @@ footer {
     min-height: 500px;
 }
 
-@import 'mobile.scss';
+@import "mobile";

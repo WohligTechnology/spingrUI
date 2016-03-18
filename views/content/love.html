@@ -19,14 +19,14 @@
                       <div class="post-details brand-gray-lighter">
                         <h3 class="brand-black">{{love.title}}</h3>
                         <p>{{love.timestamp|date}} by {{love.author}}</p>
-                        <p ng-bind-html="love.desc"></p>
+                        <div class="descp hidden-xs" ng-bind-html="love.desc"></div>
                       </div>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 hidden-xs">
               <div class="most-viewed">
                 <h1 class="gray-dark">MOST VIEWED</h1>
                 <ul>
