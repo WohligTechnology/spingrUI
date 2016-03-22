@@ -258,9 +258,12 @@
 
 @media (max-width: 767px) {
     header {
-        top: 60px;
+      padding: 20px 0;
+        position: static;
+        background-color: $brand-gray;
         nav.menu {
-            padding: 12% 0;
+            padding: 10% 0;
+            top: 0;
             ul {
                 width: 45%;
                 li {
@@ -270,7 +273,14 @@
                 }
             }
         }
+        .menu-links {
+          position: absolute;
+          top: 15px;
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
     }
+    .slide-menu { display: inline-block; }
     .slide-me {
         .row-flex {
             //            display: block;
