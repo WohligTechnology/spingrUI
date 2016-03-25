@@ -7,13 +7,13 @@
           <div class="row" ng-if="recommended.length > 0">
             <div class="col-md-8">
               <div class="row">
-                <div class="col-md-9 col-sm-9">
+                <div class="col-md-9 col-sm-9 col-xs-10">
                   <p class="brand-gray-lighter-2 blog-time">
                     {{article.timestamp|date}} by {{article.author}}
                   </p>
                   <h1 class="brand-pink title">{{article.title}}</h1>
                 </div>
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-3 col-sm-3 col-xs-2">
                   <div class="shares brand-gray-lighter-2 text-center">
                     <h2>{{article.views}}</h2>
                     <p>VIEWS</p>
@@ -100,7 +100,7 @@
                   </div>
                   <div class="col-md-6 col-sm-6">
                     <div class="clearfix">
-                      <div class="pull-right">
+                      <div class="pull-right no-float">
                         <a ui-sref="detail({id:article.prev})" ng-if="article.prev" class="btn color-me btn-pink" type="button">
                           <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
                         <a ui-sref="detail({id:article.next})" ng-if="article.next" class="btn color-me btn-pink" type="button">Next Story
@@ -136,13 +136,13 @@
             <div class="row" ng-if="recommended.length == 0">
               <div class="col-md-12">
                 <div class="row">
-                  <div class="col-md-9 col-sm-9">
+                  <div class="col-md-9 col-sm-9 col-xs-10">
                     <p class="brand-gray-lighter-2 blog-time">
                       {{article.timestamp|date}} by {{article.author}}
                     </p>
                     <h1 class="brand-pink title">{{article.title}}</h1>
                   </div>
-                  <div class="col-md-3 col-sm-3">
+                  <div class="col-md-3 col-sm-3 col-xs-2">
                     <div class="shares brand-gray-lighter-2">
                       <h2>{{article.views}}</h2>
                       <p>VIEWS</p>
@@ -227,7 +227,7 @@
                     </div>
                     <div class="col-md-6 col-sm-6">
                       <div class="clearfix">
-                        <div class="pull-right">
+                        <div class="pull-right no-float">
                           <a ui-sref="detail({id:article.prev})" ng-if="article.prev" class="btn color-me btn-pink" type="button">
                             <i class="fa fa-chevron-left i-left"></i>Previous Story</a>
                           <a ui-sref="detail({id:article.next})" ng-if="article.next" class="btn color-me btn-pink" type="button">Next Story
