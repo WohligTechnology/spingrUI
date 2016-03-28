@@ -6,8 +6,10 @@ var firstapp = angular.module('firstapp', [
   'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider,cfpLoadingBarProvider) {
+  cfpLoadingBarProvider.includeBar = false;
+  cfpLoadingBarProvider.includeSpinner = true;
+  cfpLoadingBarProvider.spinnerTemplate = '<div class="white-blurbg"><div class="lll-loader"><img src="img/loader.gif" alt="" class="img-responsive" /></div></div>';
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
 

@@ -355,6 +355,11 @@
     }
     .img-hold { margin: -10px 0 10px 10px; }
     .goops-detail p { margin-left: 10px; }
+    .abt .abt-txt {
+      width: 100%;
+      font-size: 18px;
+    }
+    .abt { margin-top: -10px; }
 }
 
 @media (max-width: 480px) {
@@ -413,8 +418,9 @@
         height: 230px;
     }
     .abt {
+      padding: 35px;
+      margin-top: -5px;
         .abt-txt {
-            width: 90%;
             font-size: 16px;
             line-height: 20px;
         }
@@ -455,6 +461,8 @@
       margin: -14px 0 10px 0;
       img { padding: 0; }
     }
+
+    .mobile-menu ul li a { font-size: 17px; }
 
     .goops-detail { padding: 15px 10px 15px 30px; }
 

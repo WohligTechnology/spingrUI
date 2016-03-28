@@ -4,6 +4,7 @@ var jsArray = [
   './bower_components/flexslider/jquery.flexslider-min.js',
   './bower_components/angular/angular.min.js',
   './bower_components/angular-sanitize/angular-sanitize.min.js',
+  './bower_components/angular-loading-bar/src/loading-bar.js',
   './bower_components/angular-animate/angular-animate.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap.min.js',
   './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',

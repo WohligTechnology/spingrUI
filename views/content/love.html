@@ -8,11 +8,11 @@
               <div class="post-elements" ng-repeat="love in loveblog track by $index">
                 <div class="row">
                   <div class="col-md-4 col-sm-4">
-                    <div class="post-image bdhov border-me-hov">
-                      <a ui-sref="detail({id:love.id})">
+                    <a ui-sref="detail({id:love.id})">
+                      <div class="post-image bdhov border-me-hov">
                         <img ng-src="{{love.image|serverimage}}" alt="" />
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
                   <div class="col-md-8 col-sm-8">
                     <a ui-sref="detail({id:love.id})">

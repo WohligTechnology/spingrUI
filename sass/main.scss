@@ -7,6 +7,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/fontawesome/css/font-awesome.min.css";
+@import "../bower_components/angular-loading-bar/src/loading-bar.css";
 
 /* Brand colors */
 
@@ -681,6 +682,8 @@ header {
     @include transform(translateY(0));
 }
 .mobile-menu {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   margin: 10px 0px 0px;
   padding: 10px 0;
   text-align: center;
@@ -1452,6 +1455,26 @@ footer {
 
 .min500 {
     min-height: 500px;
+}
+.white-blurbg {
+  @include square(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  .lll-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    img {
+      width: 80px;
+      opacity: 1;
+    }
+  }
 }
 
 @import "mobile";
