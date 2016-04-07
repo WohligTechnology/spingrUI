@@ -7,14 +7,14 @@
             <div class="col-md-8">
               <div class="post-elements" ng-repeat="love in loveblog track by $index">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4">
+                  <div class="col-md-8 col-sm-6">
                     <a ui-sref="detail({id:love.id})">
                       <div class="post-image bdhov border-me-hov">
                         <img ng-src="{{love.image|serverimage}}" alt="" />
                       </div>
                     </a>
                   </div>
-                  <div class="col-md-8 col-sm-8">
+                  <div class="col-md-4 col-sm-6"> 
                     <a ui-sref="detail({id:love.id})">
                       <div class="post-details brand-gray-lighter">
                         <h3 class="brand-black">{{love.title}}</h3>

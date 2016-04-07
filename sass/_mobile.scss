@@ -58,10 +58,9 @@
     .love-main {
         padding: 40px 0 40px 40px;
         .post-elements {
-            height: 100px;
             .post-image {
-                width: 160px;
-                height: 90px;
+                width: 300px;
+                height: 180px;
             }
             .post-details {
                 line-height: 13px;
@@ -88,8 +87,8 @@
     }
     .bdhov {
         &:after {
-            width: 135px;
-            height: 100px;
+            width: 275px;
+            height: 190px;
         }
     }
     .content-right {
@@ -150,10 +149,9 @@
     .love-main {
         padding: 30px;
         .post-elements {
-            height: auto;
             .post-image {
-                width: 200px;
-                height: 115px;
+                width: 300px;
+                height: 160px;
             }
         }
         .most-viewed {
@@ -192,8 +190,8 @@
     }
     .bdhov {
         &:after {
-            width: 185px;
-            height: 125px;
+            width: 270px;
+            height: 170px;
         }
     }
     .love-detail-main .most-viewed-2 ul li figure {
@@ -461,6 +459,8 @@
       margin: -14px 0 10px 0;
       img { padding: 0; }
     }
+    .love-main .post-elements .post-image { @include size(225px , 150px); }
+    .bdhov:after, .greenhov:after { @include size(200px, 160px); }
 
     .mobile-menu ul li a { font-size: 17px; }
 
