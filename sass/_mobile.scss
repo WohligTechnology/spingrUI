@@ -366,11 +366,11 @@
         nav.menu {
             padding: 20% 0;
             ul {
-                width: 40%;
+                width: 50%;
                 li {
-                    text-align: center;
+                    text-align: left;
                     a {
-                        font-size: 19px;
+                        font-size: 24px;
                     }
                 }
             }
@@ -462,7 +462,7 @@
     .love-main .post-elements .post-image { @include size(225px , 150px); }
     .bdhov:after, .greenhov:after { @include size(200px, 160px); }
 
-    .mobile-menu ul li a { font-size: 17px; }
+    .mobile-menu ul li a { font-size: 22px; }
 
     .goops-detail { padding: 15px 10px 15px 30px; }
 
