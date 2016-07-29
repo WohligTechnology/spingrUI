@@ -18,7 +18,7 @@
                     <a ui-sref="detail({id:love.id})">
                       <div class="post-details brand-gray-lighter">
                         <h3 class="brand-black">{{love.title}}</h3>
-                        <p>{{love.author}} by {{love.timestamp|date}}</p>
+                        <p>By {{love.author}} | {{love.timestamp|date}}</p>
                         <div class="descp hidden-xs" ng-bind-html="love.desc"></div>
                       </div>
                     </a>

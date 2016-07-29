@@ -8,7 +8,7 @@
                             <div class="blog-content" ng-repeat="blog in loveblog track by $index">
                                 <a ui-sref="detail({id:blog.id})"><p class="brand-gray dark confession-head">{{blog.title}}</p>
                                    </a>
-                                      <p class="ls">{{blog.author}} by {{blog.timestamp|date}}</p>
+                                      <p class="ls">By {{blog.author}} | {{blog.timestamp|date}}</p>
                             </div>
                         </div>
                         <div class="col-md-4">
