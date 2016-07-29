@@ -7,7 +7,7 @@
                         <div class="col-md-8">
                             <div class="blog-content" >
                                 <p class="brand-gray dark">{{article.title}}</p>
-                                <p class="ls">  {{article.timestamp|date}} by {{article.author}}</p>
+                                <p class="ls">{{article.author}} by {{article.timestamp|date}}</p>
                                 <p ng-bind-html="article.desc"></p>
                                 <div class="share-links">
                                     <ul class="list-inline">
