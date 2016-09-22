@@ -27,6 +27,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider,cfpLo
     controller: 'SliderCtrl'
   })
 
+  .state('coming', {
+    url: "/coming",
+    templateUrl: "views/template.html",
+    controller: 'ComingCtrl'
+  })
+
   .state('love', {
     url: "/love",
     templateUrl: "views/template.html",

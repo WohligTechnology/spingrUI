@@ -103,14 +103,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   }];
 })
 
-.controller('AboutusCtrl', function($scope, TemplateService, NavigationService) {
+.controller('ComingCtrl', function($scope, TemplateService, NavigationService) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("aboutus");
-    $scope.menutitle = NavigationService.makeactive("AboutUs");
+    $scope.template = TemplateService.changecontent("coming");
+    $scope.menutitle = NavigationService.makeactive("Coming");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.footercolor = "black";
+    TemplateService.header = "views/comingsoon_header.html";
+    TemplateService.footermenu = "views/comingsoon_footermenu.html";
+    TemplateService.footer = "views/comingsoon_footer.html";
   })
+
+  .controller('AboutusCtrl', function($scope, TemplateService, NavigationService) {
+      //Used to name the .html file
+      $scope.template = TemplateService.changecontent("aboutus");
+      $scope.menutitle = NavigationService.makeactive("AboutUs");
+      TemplateService.title = $scope.menutitle;
+      $scope.navigation = NavigationService.getnav();
+      $scope.footercolor = "black";
+    })
   .controller('SexpertDetailCtrl', function($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("sexpertdetail");
