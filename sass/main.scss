@@ -577,14 +577,20 @@ nav li:hover .dropdown-menu {
             height: 100%;
             overflow: hidden;
 
+            .content-1 {
+                p {
+                    font-size: 16px;
+                }
+            }
+
             .content-2 {
                 position: absolute;
                 top: 0;
 
                 p {
-                    font-size: 25px;
+                    font-size: 38px;
                     font-weight: 600;
-                    line-height: 30px;
+                    line-height: 34px;
                     letter-spacing: 3px;
                     text-transform: uppercase;
 
@@ -959,7 +965,7 @@ header {
             }
 
             .elements-2 {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 500;
             }
 
@@ -1053,7 +1059,7 @@ header {
             }
 
             p {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             p + .descp {
@@ -1079,7 +1085,7 @@ header {
         border: 5px solid $gray-base;
 
         h1 {
-            margin-left: -20px;
+            margin-left: -102px;
             font-size: 28px;
         }
 
@@ -1743,5 +1749,19 @@ footer {
         width: 767px;
     }
 }
+
+.more-buttongoops {
+    padding-top: 30px;
+
+    .btn-black {
+        background: rgba(0, 0, 0, 0);
+        border: 2px solid #218dfb;
+        height: auto;
+        padding: 7px 22px;
+        width: auto;
+        color: #218dfb;
+    }
+}
 @import "comingsoon";
 @import "mobile";
+@import "comingSoonMobile";
