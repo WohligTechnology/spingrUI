@@ -2,6 +2,7 @@
     .slide-me {
         .slide-part {
             height: 250px;
+
             .content-holder {
                 .content-1 {
                     p {
@@ -9,6 +10,7 @@
                         line-height: 15px;
                     }
                 }
+
                 .content-2 {
                     p {
                         font-size: 20px;
@@ -16,11 +18,14 @@
                     }
                 }
             }
+
             .love-back {
                 height: 250px;
             }
+
             .content-hover {
                 padding: 20px;
+
                 .fifty {
                     p.quote {
                         font-size: 25px;
@@ -29,41 +34,52 @@
             }
         }
     }
+
     .queries {
         .inner-queries {
             padding: 40px;
+
             h1 {
                 font-size: 25px;
             }
+
             .slider {
                 height: 350px;
                 margin-bottom: 20px;
             }
+
             .more-button {
                 margin: 20px 0;
             }
         }
     }
+
     .mobile-section {
         .mobile-text {
             margin-top: 200px;
+
             h2 {
                 font-size: 22px;
             }
+
             .store-image {
                 height: 40px;
             }
         }
     }
+
     .love-main {
         padding: 40px 0 40px 40px;
+
         .post-elements {
             .post-image {
                 width: 300px;
                 height: 180px;
             }
+
             .post-details {
                 line-height: 13px;
+
                 p + .descp {
                     height: 40px;
                     margin: 7px 0 0;
@@ -72,12 +88,15 @@
             }
         }
     }
+
     .love-detail-main {
         padding: 40px 0 40px 40px;
+
         .love-blog-image {
             width: 445px;
         }
     }
+
     .back-img {
         .text-inside {
             h2 {
@@ -85,25 +104,30 @@
             }
         }
     }
+
     .bdhov {
         &:after {
             width: 275px;
             height: 190px;
         }
     }
+
     .content-right {
         .secret {
             h5 {
                 font-size: 25px;
             }
+
             p {
                 margin: 10px 0;
             }
+
             button {
                 padding: 6px 18px;
             }
         }
     }
+
     .queries-pg {
         .text-inside {
             h2 {
@@ -111,10 +135,12 @@
             }
         }
     }
+
     .love-detail-main .most-viewed-2 ul li figure {
         margin: 0;
         width: 190px;
     }
+
     .love-main .most-viewed ul li figure {
         margin: 0;
         width: 190px;
@@ -128,12 +154,12 @@
         }
     }
 }
-
 @media (max-width: 991px) {
     header {
         nav.menu {
             ul {
                 width: 40%;
+
                 li {
                     a {
                         font-size: 25px;
@@ -142,35 +168,44 @@
             }
         }
     }
+
     .img-hold {
         margin: -10px 0 10px 15px;
         z-index: 1;
     }
+
     .love-main {
         padding: 30px;
+
         .post-elements {
             .post-image {
                 width: 300px;
                 height: 160px;
             }
         }
+
         .most-viewed {
             left: 0;
         }
     }
+
     .love-detail-main {
         padding: 30px;
+
         .love-blog-image {
             width: auto;
         }
+
         .most-viewed-2 {
             margin-top: 40px;
             left: 0;
         }
     }
+
     .aboutus-back {
         height: 270px;
     }
+
     .back-img {
         // height: 270px;
         .text-inside {
@@ -179,61 +214,85 @@
             }
         }
     }
+
     .content-main {
-      margin-top: -20px;
-      padding: 30px;
+        margin-top: -20px;
+        padding: 30px;
     }
+
     .content-right {
         .secret {
             position: static;
         }
     }
+
     .bdhov {
         &:after {
             width: 270px;
             height: 170px;
         }
     }
+
     .love-detail-main .most-viewed-2 ul li figure {
         margin: 0 auto;
         width: 290px;
+
         figcaption {
             padding: 0;
         }
     }
+
     .love-main .most-viewed ul li figure {
         margin: 0 auto;
         width: 290px;
+
         figcaption {
             padding: 0;
         }
     }
+
     .heading {
-        .love-head,
-        .lie-head {
+        .lie-head,
+        .love-head {
             h2 {
                 font-size: 50px;
             }
         }
     }
-    .goops { top: 0; }
-    .goops-text {
-      position: static;
-      img { padding: 15px 0; }
+
+    .goops {
+        top: 0;
     }
-    .queries { margin: 0; }
+
+    .goops-text {
+        position: static;
+
+        img {
+            padding: 15px 0;
+        }
+    }
+
+    .queries {
+        margin: 0;
+    }
 }
 @media (max-width: 767px) {
-  .padding-right { padding-right: 0; }
+    .padding-right {
+        padding-right: 0;
+    }
+
     header {
-      padding: 20px 0;
+        padding: 20px 0;
         position: static;
         background-color: $brand-gray;
+
         nav.menu {
             padding: 10% 0;
             top: 0;
+
             ul {
                 width: 45%;
+
                 li {
                     a {
                         font-size: 23px;
@@ -241,21 +300,31 @@
                 }
             }
         }
+
         .menu-links {
-          position: absolute;
-          top: 15px;
-          left: 50%;
-          @include transform(translateX(-50%));
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            @include transform(translateX(-50%));
         }
     }
-    .slide-menu { display: inline-block; }
+
+    .slide-menu {
+        display: inline-block;
+    }
+
     .slide-me {
         .row-flex {
             //            display: block;
         }
+
         .slide-part {
-          height: 200px;
-          .love-back { height: 200px; }
+            height: 200px;
+
+            .love-back {
+                height: 200px;
+            }
+
             .content-holder {
                 .content-1 {
                     p {
@@ -263,6 +332,7 @@
                         line-height: 13px;
                     }
                 }
+
                 .content-2 {
                     p {
                         font-size: 15px;
@@ -270,12 +340,15 @@
                     }
                 }
             }
+
             .content-hover {
                 padding: 15px;
+
                 .fifty {
                     p.quote {
                         font-size: 20px;
                     }
+
                     button {
                         margin: 40px 0;
                     }
@@ -283,20 +356,27 @@
             }
         }
     }
-    .love-main { margin-top: -10px; }
+
+    .love-main {
+        margin-top: -10px;
+    }
+
     .mobile-section {
         .mobile-image {
             text-align: center;
         }
+
         .mobile-text {
             margin-top: 0;
             margin-bottom: 40px;
             text-align: center;
         }
     }
+
     .aboutus-back {
         height: 260px;
     }
+
     .back-img {
         // height: 260px;
         .text-inside {
@@ -305,70 +385,115 @@
             }
         }
     }
+
     .heading {
-        .love-head,
-        .lie-head {
+        .lie-head,
+        .love-head {
             h2 {
                 font-size: 30px;
             }
         }
     }
-    .over-lap {
-      padding: 0;
-      position: static;
-    }
-    .slide-me .bg-2 { display: none; }
-    .goops {
-      height: auto;
-      padding: 20px 0;
-      position: static;
-    }
-    .queries { margin: 0; }
-    .queries .inner-queries .more-button { text-align: left; }
-    .mobile-foot {
-      li { margin: 5px 30px; }
-    }
-    .post-image { margin: 0 auto; }
-    .post-details {
-      margin: 10px 0 25px;
-      text-align: center;
-    }
-    .love-detail-main {
-      margin-top: -10px;
-      .title {
-        margin: 10px 0 0;
-        font-size: 20px;
-      }
-      .shares {
-        margin: 0;
-        text-align: center;
-        h2 { font-size: 25px; }
-      }
-      .other-links {
-        margin: 20px 0;
-        text-align: center;
-        .share-social-links { margin-bottom: 20px; }
-      }
-      .no-float { float: none !important; }
-    }
-    .img-hold { margin: -10px 0 10px 10px; }
-    .goops-detail p { margin-left: 10px; }
-    .abt .abt-txt {
-      width: 100%;
-      font-size: 18px;
-    }
-    .abt { margin-top: -10px; }
-}
 
+    .over-lap {
+        padding: 0;
+        position: static;
+    }
+
+    .slide-me .bg-2 {
+        display: none;
+    }
+
+    .goops {
+        height: auto;
+        padding: 20px 0;
+        position: static;
+    }
+
+    .queries {
+        margin: 0;
+    }
+
+    .queries .inner-queries .more-button {
+        text-align: left;
+    }
+
+    .mobile-foot {
+        li {
+            margin: 5px 30px;
+        }
+    }
+
+    .post-image {
+        margin: 0 auto;
+    }
+
+    .post-details {
+        margin: 10px 0 25px;
+        text-align: center;
+    }
+
+    .love-detail-main {
+        margin-top: -10px;
+
+        .title {
+            margin: 10px 0 0;
+            font-size: 20px;
+        }
+
+        .shares {
+            margin: 0;
+            text-align: center;
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        .other-links {
+            margin: 20px 0;
+            text-align: center;
+
+            .share-social-links {
+                margin-bottom: 20px;
+            }
+        }
+
+        .no-float {
+            float: none !important;
+        }
+    }
+
+    .img-hold {
+        margin: -10px 0 10px 10px;
+    }
+
+    .goops-detail p {
+        margin-left: 10px;
+    }
+
+    .abt .abt-txt {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .abt {
+        margin-top: -10px;
+    }
+}
 @media (max-width: 480px) {
     header {
         top: 50px;
+
         nav.menu {
             padding: 20% 0;
+
             ul {
                 width: 50%;
+
                 li {
                     text-align: left;
+
                     a {
                         font-size: 24px;
                     }
@@ -376,12 +501,15 @@
             }
         }
     }
+
     .slide-me {
         .row-flex {
             display: block;
         }
+
         .slide-part {
             height: 300px;
+
             .content-holder {
                 .content-1 {
                     p {
@@ -389,6 +517,7 @@
                         line-height: 25px;
                     }
                 }
+
                 .content-2 {
                     p {
                         font-size: 25px;
@@ -396,15 +525,19 @@
                     }
                 }
             }
+
             .love-back {
                 height: 300px;
             }
+
             .content-hover {
                 padding: 15px;
+
                 .fifty {
                     p.quote {
                         font-size: 20px;
                     }
+
                     button {
                         margin: 40px 0;
                     }
@@ -412,25 +545,30 @@
             }
         }
     }
+
     .aboutus-back {
         height: 230px;
     }
+
     .abt {
-      padding: 35px;
-      margin-top: -5px;
+        padding: 35px;
+        margin-top: -5px;
+
         .abt-txt {
             font-size: 16px;
             line-height: 20px;
         }
     }
+
     .heading {
-        .love-head,
-        .lie-head {
+        .lie-head,
+        .love-head {
             h2 {
                 font-size: 20px;
             }
         }
     }
+
     .back-img {
         // height: 230px;
         .text-inside {
@@ -440,41 +578,77 @@
             }
         }
     }
-    .love-main { margin-top: -5px; }
+
+    .love-main {
+        margin-top: -5px;
+    }
+
     .love-detail-main {
-      margin-top: -5px;
-      padding: 20px 15px;
-      .title {
-        font-size: 18px;
-      }
-      .shares {
-        margin-left: -15px;
-        h2 { font-size: 20px; }
-        p { letter-spacing: 1px; }
-      }
+        margin-top: -5px;
+        padding: 20px 15px;
+
+        .title {
+            font-size: 18px;
+        }
+
+        .shares {
+            margin-left: -15px;
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                letter-spacing: 1px;
+            }
+        }
     }
 
     .img-hold {
-      @include square(80px);
-      margin: -14px 0 10px 0;
-      img { padding: 0; }
+        @include square(80px);
+        margin: -14px 0 10px;
+
+        img {
+            padding: 0;
+        }
     }
-    .love-main .post-elements .post-image { @include size(225px , 150px); }
-    .bdhov:after, .greenhov:after { @include size(200px, 160px); }
 
-    .mobile-menu ul li a { font-size: 22px; }
+    .love-main .post-elements .post-image {
+        @include size(225px , 150px);
+    }
 
-    .goops-detail { padding: 15px 10px 15px 30px; }
+    .bdhov:after,
+    .greenhov:after {
+        @include size(200px, 160px);
+    }
 
-    .goops-text img { padding: 30px 0; }
+    .mobile-menu ul li a {
+        font-size: 22px;
+    }
+
+    .goops-detail {
+        padding: 15px 10px 15px 30px;
+    }
+
+    .goops-text img {
+        padding: 30px 0;
+    }
     // detail page
-    .blog-content .dark { font-size: 14px; }
+    .blog-content .dark {
+        font-size: 14px;
+    }
     // footer
-    .mobile-foot li { margin: 5px 15px; }
-    footer { padding: 20px 0; }
+    .mobile-foot li {
+        margin: 5px 15px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
     footer .social-links ul li a {
-      @include square(30px);
-      font-size: 18px;
-      line-height: 30px;
+        @include square(30px);
+        font-size: 18px;
+        line-height: 30px;
     }
 }

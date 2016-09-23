@@ -27,10 +27,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider,cfpLo
     controller: 'SliderCtrl'
   })
 
-  .state('coming', {
-    url: "/coming",
+  .state('comingSoon', {
+    url: "/comingSoon",
     templateUrl: "views/template.html",
     controller: 'ComingCtrl'
+  })
+  .state('lll_emailer', {
+    url: "/lll_emailer",
+    templateUrl: "views/template.html",
+    controller: 'lll_emailerCtrl'
   })
 
   .state('love', {

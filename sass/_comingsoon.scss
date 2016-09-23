@@ -1,8 +1,161 @@
+//COMING SOON CSS START
+
 .backimg {
-  background: url("../img/lll-coming-soon.jpg") no-repeat 100% 100%;
-  background-size: cover;
+    padding-bottom: 10%;
+    background: url("../img/lll-coming-soon.jpg") no-repeat 100% 100%;
+    background-size: cover;
 }
-.colorwhite{color:#fff;}
-.ltrspace{     padding-bottom: 5%;   letter-spacing: 17px;}
-.padding4{    padding-top: 4%;}s
-  body{background: url("../img/lll-coming-soon.jpg") no-repeat 100% 100%;}
+
+.colorwhite {
+    color: #fff;
+}
+
+.comincss {
+    padding-bottom: 5%;
+    letter-spacing: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.padding4 {
+    padding-top: 8%;
+
+    h2 {
+        font-size: 52px;
+        font-weight: 700;
+    }
+
+    .pad40 {
+        display: inline-block;
+        padding: 40px 0 0;
+    }
+
+    .imgsize {
+        width: 80% !important;
+    }
+
+    .lll {
+        font-size: 35px;
+        padding-bottom: 60px;
+    }
+
+    .storieintro {
+        margin-bottom: 15px;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .formsubmit {
+        margin: 1% 35%;
+
+        .btn {
+            height: auto !important;
+            background: transparent;
+            border: 2px solid #5f5b5b;
+            letter-spacing: -1px;
+            font-weight: 700;
+            padding: 11px 42px;
+        }
+
+        .btn:hover {
+            color: #000 !important;
+        }
+    }
+
+    .form-control {
+        height: 40px !important;
+        margin-bottom: 6% !important;
+    }
+}
+
+.list0 {
+    margin: 0 !important;
+}
+//COMING SOON CSS END
+//LLL_EMAILER CSS START
+
+.pageup {
+    background: #000;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+.font80 {
+    height: 67px;
+    font-size: 80px;
+}
+
+.imgsize2 {
+    width: 100px;
+}
+
+.imgsize3 {
+    width: 53px;
+}
+
+.imgsize4 {
+    width: 130px;
+}
+
+.marginl {
+    margin-left: 20px;
+}
+
+.rowpad {
+    padding-bottom: 11%;
+    padding-top: 11%;
+}
+
+.margicon {
+    margin: 17% 0;
+}
+
+.margleft {
+    margin-left: 8%;
+}
+
+.containermarg {
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.conf {
+    color: #000;
+    font-size: 44px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.marg14 {
+    margin-left: 14%;
+
+    .btn {
+        color: #000;
+        font-size: 30px;
+        letter-spacing: 2px;
+        padding: 40px 20px;
+        background: rgba(0, 0, 0, 0);
+        border: 2px solid #3e3c3c;
+        font-weight: 500;
+        margin: 11% 0 8%;
+        word-spacing: 2px;
+        height: auto;
+    }
+}
+
+.intro2 {
+    margin-bottom: 3%;
+    color: #000;
+    font-size: 34px;
+    letter-spacing: 2px;
+    width: 78%;
+    float: left;
+}
+
+.backfooter {
+    background: #000;
+    padding: 20px !important;
+}
+//LLL_EMAILER CSS END
