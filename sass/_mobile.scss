@@ -277,6 +277,23 @@
     }
 }
 @media (max-width: 767px) {
+    .goops-text {
+        height: 215px;
+    }
+
+    .more-buttongoops .btn-black {
+        padding: 5px 13px;
+        font-size: 12px;
+    }
+
+    .goopswidht {
+        width: 69%;
+    }
+
+    .more-buttongoops {
+        padding-top: 0;
+    }
+
     .padding-right {
         padding-right: 0;
     }
@@ -520,7 +537,7 @@
 
                 .content-2 {
                     p {
-                        font-size: 25px;
+                        font-size: 36px;
                         line-height: 30px;
                     }
                 }

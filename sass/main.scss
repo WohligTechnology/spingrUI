@@ -288,6 +288,11 @@ $space-100: 100px;
     font-size: ceil(($font-size-base * 1.2));
 }
 
+.resize {
+    resize: none;
+    margin: 5% 0;
+}
+
 .width-100 {
     width: 100%;
 }
