@@ -6,7 +6,7 @@ var firstapp = angular.module('firstapp', [
   'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider,cfpLoadingBarProvider) {
+firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider) {
   cfpLoadingBarProvider.includeBar = false;
   cfpLoadingBarProvider.includeSpinner = true;
   cfpLoadingBarProvider.spinnerTemplate = '<div class="white-blurbg"><div class="lll-loader"><img src="img/loader.gif" alt="" class="img-responsive" /></div></div>';
@@ -28,15 +28,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider,cfpLo
   })
 
   .state('comingSoon', {
-    url: "/comingSoon",
-    templateUrl: "views/template.html",
-    controller: 'ComingCtrl'
-  })
-  .state('lll_emailer', {
-    url: "/lll_emailer",
-    templateUrl: "views/template.html",
-    controller: 'lll_emailerCtrl'
-  })
+      url: "/comingSoon",
+      templateUrl: "views/template.html",
+      controller: 'ComingCtrl'
+    })
+    .state('lll_emailer', {
+      url: "/lll_emailer",
+      templateUrl: "views/template.html",
+      controller: 'lll_emailerCtrl'
+    })
 
   .state('love', {
     url: "/love",
@@ -128,11 +128,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider,cfpLo
     controller: 'LoveDetailCtrl'
   });
 
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/comingSoon");
 
 });
-firstapp.filter('serverimage', function() {
-  return function(image) {
+firstapp.filter('serverimage', function () {
+  return function (image) {
     if (image && image !== null) {
       return adminUrl + "uploads/" + image;
     } else {
@@ -141,16 +141,16 @@ firstapp.filter('serverimage', function() {
   };
 })
 
-firstapp.directive('img', function($compile, $parse) {
+firstapp.directive('img', function ($compile, $parse) {
   return {
     restrict: 'E',
     replace: false,
-    link: function($scope, element, attrs) {
+    link: function ($scope, element, attrs) {
       var $element = $(element);
       if (!attrs.noloading) {
         $element.after("<img src='img/loading.gif' class='loading' />");
         var $loading = $element.next(".loading");
-        $element.load(function() {
+        $element.load(function () {
           $loading.remove();
           $(this).addClass("doneLoading");
         });
