@@ -46,9 +46,24 @@
     }
 
     .formsubmit {
+        h4 {
+            height: 0;
+            color: red;
+        }
+
+        .form {
+            margin-bottom: 5%;
+        }
+
+        p {
+            height: 0;
+            color: red;
+            font-weight: 700;
+        }
         margin: 1% 35%;
 
         .btn {
+            margin-top: 9%;
             height: auto !important;
             background: transparent;
             border: 2px solid #5f5b5b;
@@ -64,7 +79,7 @@
 
     .form-control {
         height: 40px !important;
-        margin-bottom: 6% !important;
+        margin-bottom: 3% !important;
     }
 }
 
@@ -142,7 +157,12 @@
         margin: 11% 0 8%;
         word-spacing: 2px;
         height: auto;
+        a {
+            color: #000 !important;
+        }
     }
+
+
 }
 
 .intro2 {
