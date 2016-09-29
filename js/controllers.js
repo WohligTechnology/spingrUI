@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'angular-loading-bar'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, cfpLoadingBar) {
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, cfpLoadingBar) {
     // cfpLoadingBar.start();
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
@@ -14,7 +14,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     function getArticles(data) {
         console.log(data.category.id);
-        _.each(data.article, function(n) {
+        _.each(data.article, function (n) {
             n.timestamp2 = moment(n.timestamp).toDate();
         });
         $scope.allCategory[parseInt(data.category.id)] = data.article;
@@ -33,7 +33,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     ];
 })
 
-.controller('LoveCtrl', function($scope, TemplateService, NavigationService, $location) {
+.controller('LoveCtrl', function ($scope, TemplateService, NavigationService, $location) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("love");
     $scope.menutitle = NavigationService.makeactive("Love");
@@ -46,7 +46,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log(data);
         $scope.category = data.catgory;
         $scope.loveblog = data.article;
-        _.each($scope.loveblog, function(n) {
+        _.each($scope.loveblog, function (n) {
             n.timestamp = moment(n.timestamp).toDate();
         });
         $scope.viewed = data.mostViewed;
@@ -87,7 +87,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 })
 
-.controller('ConfessionsCtrl', function($scope, TemplateService, NavigationService) {
+.controller('ConfessionsCtrl', function ($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("confessions");
     $scope.menutitle = NavigationService.makeactive("Confessions");
@@ -106,7 +106,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 })
 
-.controller('lll_emailerCtrl', function($scope, TemplateService, NavigationService) {
+.controller('lll_emailerCtrl', function ($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("lll_emailer");
     $scope.menutitle = NavigationService.makeactive("lll_emailer");
@@ -117,7 +117,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.footer = "views/emailer_footer.html";
 })
 
-.controller('ComingCtrl', function($scope, TemplateService, NavigationService) {
+.controller('ComingCtrl', function ($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("comingSoon");
     $scope.menutitle = NavigationService.makeactive("ComingSoon");
@@ -126,9 +126,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.header = "views/comingsoon_header.html";
     TemplateService.footermenu = "views/comingsoon_footermenu.html";
     TemplateService.footer = "views/comingsoon_footer.html";
+    $scope.form = {
+        email: ""
+    };
+    $scope.submitForm = function () {
+        $scope.complete = true;
+    };
+
+
 })
 
-.controller('AboutusCtrl', function($scope, TemplateService, NavigationService) {
+.controller('AboutusCtrl', function ($scope, TemplateService, NavigationService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("aboutus");
         $scope.menutitle = NavigationService.makeactive("AboutUs");
@@ -136,7 +144,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
         $scope.footercolor = "black";
     })
-    .controller('SexpertDetailCtrl', function($scope, TemplateService, NavigationService) {
+    .controller('SexpertDetailCtrl', function ($scope, TemplateService, NavigationService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("sexpertdetail");
         $scope.menutitle = NavigationService.makeactive("Sexpert Detail");
@@ -148,7 +156,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             ans: "Yes, of course you can enjoy intercourse with a man even after you pleasure yourself. You can masturbate by having a fantasy, touching your breasts and stroking your genitals. Do not insert objects or fingers into the vagina. Study the anatomy of the vulva and vagina. You will learn that the clitoris is the female penis, which brings about an orgasm for women when stimulated. It is situated at the apex of the vulva.Yes, of course you can enjoy intercourse with a man even after you pleasure yourself. You can masturbate by having a fantasy, touching your breasts and stroking your genitals. Do not insert objects or fingers into the vagina. Study the anatomy of the vulva and vagina. You will learn that the clitoris is the female penis, which brings about an orgasm for women when stimulated. It is situated at the apex of the vulva."
         }];
     })
-    .controller('QueriesDetailCtrl', function($scope, TemplateService, NavigationService) {
+    .controller('QueriesDetailCtrl', function ($scope, TemplateService, NavigationService) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("queriesdetail");
         $scope.menutitle = NavigationService.makeactive("Queries Detail");
@@ -161,7 +169,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
     })
 
-.controller('SliderCtrl', function($scope, TemplateService, NavigationService) {
+.controller('SliderCtrl', function ($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("slider");
     $scope.menutitle = NavigationService.makeactive("slider");
@@ -169,7 +177,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('LoveDetailCtrl', function($scope, TemplateService, NavigationService, $stateParams) {
+.controller('LoveDetailCtrl', function ($scope, TemplateService, NavigationService, $stateParams) {
     //Used to name the .html file
     function loadArticle(data) {
         $scope.catColor = TemplateService.getheader(data.category.id);
@@ -196,12 +204,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
      * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
      */
 
-    var disqus_config = function() {
+    var disqus_config = function () {
         this.page.url = "detail/" + $stateParams.id; // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = $stateParams.id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function () { // DON'T EDIT BELOW THIS LINE
         var d = document,
             s = d.createElement('script');
 
@@ -212,7 +220,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     })();
 })
 
-.controller('footerCtrl', function($scope, TemplateService, NavigationService) {
+.controller('footerCtrl', function ($scope, TemplateService, NavigationService) {
     $scope.form = {
         isdisable: true
     };
@@ -226,7 +234,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
 
     }
-    $scope.checkdisble = function(email) {
+    $scope.checkdisble = function (email) {
         console.log(email);
         if (email) {
             $scope.form.isdisable = false;
@@ -234,7 +242,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.form.isdisable = true;
         }
     };
-    $scope.sendEmail = function(email) {
+    $scope.sendEmail = function (email) {
         if (!$scope.form.isdisable) {
             NavigationService.sendSubsribe(email, doneCallback);
         }
@@ -243,11 +251,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('headerctrl', function($scope, TemplateService, NavigationService) {
+.controller('headerctrl', function ($scope, TemplateService, NavigationService) {
     $scope.template = TemplateService;
     var get = false;
     $scope.shownav = "menu-out";
-    $scope.getnav = function() {
+    $scope.getnav = function () {
         get = !get;
         if (get == true) {
             $scope.shownav = "menu-in";

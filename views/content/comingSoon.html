@@ -31,12 +31,12 @@
         <h3 class="lll">Love Lie Lust</h3>
         <p class="storieintro">A curation of true stories, that will leave you wondering;<br>is Love over-rated, lust under-rated and lie universal!</p>
         <div class="text-center formsubmit">
-            <form name="myForm" class="form">
-                <input type="text" class="form-control" placeholder="Email Address" name="email" ng-modal="email.myForm" required>
-                <p ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
-                <button type="submit" class="btn">I AM IN</button>
+            <form name="myForm" class="form" ng-hide="complete">
+                <input type="email" class="form-control" placeholder="Email Address" name="email" ng-modal="form.email" required>
+                <p ng-show="myForm.email.$invalid">Email is required</p>
+                <button class="btn" ng-disabled="myForm.$invalid" ng-click="submitForm();">I AM IN</button>
             </form>
-            <div>
+            <div ng-show="complete">
                 <h4>Thankyou for Submission</h4>
             </div>
         </div>
