@@ -115,6 +115,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.header = "views/comingsoon_header.html";
     TemplateService.footermenu = "views/comingsoon_footermenu.html";
     TemplateService.footer = "views/emailer_footer.html";
+
 })
 
 .controller('ComingCtrl', function ($scope, TemplateService, NavigationService) {
@@ -127,10 +128,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.footermenu = "views/comingsoon_footermenu.html";
     TemplateService.footer = "views/comingsoon_footer.html";
     $scope.form = {
-        email: ""
+        email: "123"
     };
-    $scope.submitForm = function () {
+    $scope.submitForm = function (email) {
         $scope.complete = true;
+        NavigationService.sendSubsribe(email, function () {});
     };
 
 
