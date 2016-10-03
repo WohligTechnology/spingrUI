@@ -1,20 +1,17 @@
 @media (max-width: 768px) {
-    .padding4 .formsubmit p {
-        font-size: 14px;
-    }
-
-    .backimg {
-        padding-bottom: 35%;
-    }
-
     .comincss {
         padding-bottom: 16%;
         letter-spacing: 10px;
         font-size: 12px;
     }
 
+    .list-inline > li {
+        padding: 0 !important;
+    }
+
     .padding4 .imgsize {
         width: 66% !important;
+        display: inline-block;
     }
 
     .padding4 .lll {
@@ -23,7 +20,7 @@
     }
 
     .padding4 h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .padding4 {
@@ -35,7 +32,6 @@
     }
 
     .padding4 .form-control {
-        font-size: 14px;
         height: 33px !important;
     }
 
@@ -44,7 +40,6 @@
     }
 
     .padding4 .formsubmit .btn {
-        font-size: 14px;
         padding: 6px 42px;
     }
 }

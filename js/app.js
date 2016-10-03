@@ -28,10 +28,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     })
 
     .state('comingSoon', {
-        url: "/comingSoon",
-        templateUrl: "views/template.html",
-        controller: 'ComingCtrl'
-    })
+            url: "/comingSoon",
+            templateUrl: "views/template.html",
+            controller: 'ComingCtrl'
+        })
+        .state('lll_emailer', {
+            url: "/lll_emailer",
+            templateUrl: "views/template.html",
+            controller: 'lll_emailerCtrl'
+        })
 
     .state('love', {
         url: "/love",
@@ -126,6 +131,20 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
     $urlRouterProvider.otherwise("/comingSoon");
 
 });
+firstapp.directive('autoHeightfixed', function($compile, $parse) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function($scope, element, attrs) {
+            var $element = $(element);
+            var windowHeight = $(window).height();
+            var addHeight = function() {
+                $element.css("height", windowHeight);
+            };
+            addHeight();
+        }
+    };
+});
 firstapp.filter('serverimage', function() {
     return function(image) {
         if (image && image !== null) {
@@ -135,20 +154,7 @@ firstapp.filter('serverimage', function() {
         }
     };
 })
-firstapp.directive('autoHeightfixed', function($compile, $parse) {
-  return {
-      restrict: 'EA',
-      replace: false,
-      link: function($scope, element, attrs) {
-          var $element = $(element);
-          var windowHeight = $(window).height();
-          var addHeight = function() {
-              $element.css("height", windowHeight);
-          };
-          addHeight();
-      }
-  };
-});
+
 firstapp.directive('img', function($compile, $parse) {
     return {
         restrict: 'E',
