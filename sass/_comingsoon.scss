@@ -9,8 +9,12 @@
     color: #fff;
 }
 
+.imgsize {
+    width: 80% !important;
+}
+
 .comincss {
-    padding-bottom: 4%;
+    padding-bottom: 3%;
     letter-spacing: 20px;
     font-size: 20px;
     font-weight: 600;
@@ -31,7 +35,7 @@
 
     .lll {
         font-size: 40px;
-        padding-bottom: 60px;
+        padding-bottom: 35px;
     }
 
     .storieintro {
@@ -41,13 +45,11 @@
     }
 
     .formsubmit {
+        margin: 1% 35%;
+
         h4 {
             height: 0;
             color: #fff;
-        }
-
-        .form {
-            margin-bottom: 5%;
         }
 
         p {
@@ -55,7 +57,6 @@
             color: red;
             font-weight: 700;
         }
-        margin: 1% 35%;
 
         .btn {
             margin-top: 9%;
@@ -65,7 +66,7 @@
             color: #fff;
             letter-spacing: -1px;
             font-weight: 700;
-            padding: 11px 42px;
+            padding: 10px 42px;
         }
 
         .btn:hover {
@@ -74,8 +75,9 @@
     }
 
     .form-control {
+        padding: 5px 12px !important;
         height: 40px !important;
-        margin-bottom: 3% !important;
+        margin-bottom: 2% !important;
     }
 }
 
