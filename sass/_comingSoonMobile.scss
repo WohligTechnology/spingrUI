@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+    .padding4 .formsubmit p {
+        font-size: 14px;
+    }
+
     .backimg {
         padding-bottom: 35%;
     }
@@ -31,6 +35,7 @@
     }
 
     .padding4 .form-control {
+        font-size: 14px;
         height: 33px !important;
     }
 
@@ -39,56 +44,7 @@
     }
 
     .padding4 .formsubmit .btn {
-        padding: 6px 42px;
-    }
-    //lll_emailer comincss
-    .font80 {
-        height: 32px;
-        font-size: 41px;
-    }
-
-    .imgsize2 {
-        width: 50px;
-    }
-
-    .margicon {
-        margin: 26% 0;
-    }
-
-    .inlineblock {
-        margin-bottom: 0;
-    }
-
-    .marginl {
-        margin-left: 2px;
-    }
-
-    .imgsize2 {
-        width: 33px;
-    }
-
-    .imgsize3 {
-        width: 20px;
-    }
-
-    .imgsize4 {
-        width: 43px;
-    }
-
-    .marg14 {
-        margin-left: 5%;
-    }
-
-    .conf {
-        font-size: 13px;
-    }
-
-    .marg14 .btn {
-        font-size: 11px;
-        padding: 18px 8px;
-    }
-
-    .intro2 {
         font-size: 14px;
+        padding: 6px 42px;
     }
 }

@@ -106,17 +106,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 })
 
-.controller('lll_emailerCtrl', function($scope, TemplateService, NavigationService) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("lll_emailer");
-    $scope.menutitle = NavigationService.makeactive("lll_emailer");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-    TemplateService.header = "views/comingsoon_header.html";
-    TemplateService.footermenu = "views/comingsoon_footermenu.html";
-    TemplateService.footer = "views/emailer_footer.html";
-})
-
 .controller('ComingCtrl', function($scope, TemplateService, NavigationService) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("comingSoon");
@@ -126,7 +115,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.header = "views/comingsoon_header.html";
     TemplateService.footermenu = "views/comingsoon_footermenu.html";
     TemplateService.footer = "views/comingsoon_footer.html";
+    $scope.form = {
+        email: ""
+    };
+    $scope.submitForm = function(email) {
+        $scope.complete = true;
+        NavigationService.sendSubsribe(email, function() {});
+    };
+
+
 })
+
 
 .controller('AboutusCtrl', function($scope, TemplateService, NavigationService) {
         //Used to name the .html file

@@ -1,28 +1,28 @@
-<div class="backimg">
+<section auto-heightfixed class="backimg">
     <div class="container text-center colorwhite padding4">
         <h3 class="comincss">COMING SOON</h3>
         <h2>READY TO UNCOVER THE</h2>
         <h2>SINS OF A STRANGER?</h2>
-        <div class="pad40 menu-links" ui-sref="home" href="#/home">
+        <div class="pad40 menu-links" ui-sref="home" href="">
             <ul class="list-inline list0">
                 <li>
                     <a href="">
                         <div class="menu-icons">
-                            <img alt="" src="img/menu/love.png" class="imgsize img-responsive">
+                            <img alt="" src="img/menu/love.png" class=" img-responsive">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <div class="menu-icons">
-                            <img alt="" src="img/menu/lie.png" class="imgsize img-responsive">
+                            <img alt="" src="img/menu/lie.png" class=" img-responsive">
                         </div>
                     </a>
                 </li>
                 <li>
                     <a href="">
                         <div class="menu-icons">
-                            <img alt="" src="img/menu/lust.png" class="imgsize img-responsive">
+                            <img alt="" src="img/menu/lust.png" class=" img-responsive">
                         </div>
                     </a>
                 </li>
@@ -31,14 +31,15 @@
         <h3 class="lll">Love Lie Lust</h3>
         <p class="storieintro">A curation of true stories, that will leave you wondering;<br>is Love over-rated, lust under-rated and lie universal!</p>
         <div class="text-center formsubmit">
-            <form name="myForm" class="form">
-                <input type="text" class="form-control" placeholder="Email Address" name="email" ng-modal="email.myForm" required>
-                <p ng-show="myForm.email.$error.required && myForm.email.$dirty">Email is required</p>
-                <button type="submit" class="btn">I AM IN</button>
+
+            <form name="myForm" class="form" ng-hide="complete">
+                <input ng-model="form.email" type="email" class="form-control" placeholder="Email Address" name="email" required>
+                <p ng-show="myForm.email.$invalid && myForm.email.$touched">Email is required</p>
+                <button class="btn" ng-disabled="myForm.$invalid" ng-click="submitForm(form.email);">I AM IN</button>
             </form>
-            <div>
-                <h4>Thankyou for Submission</h4>
+            <div ng-show="complete">
+                <h4 class="brand-white">Thankyou for Submission</h4>
             </div>
         </div>
     </div>
-</div>
+</section>
