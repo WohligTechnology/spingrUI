@@ -18,15 +18,18 @@
                                 <div class="goops-text">
                                     <img alt="" class="goopswidht" src="img/goops-text.png" />
                                     <div class="more-buttongoops">
-                                        <a ui-sref="goops">
+                                        <!-- <a ui-sref="goops">
                                             <button class="btn btn-black btn-more" type="button">View More</button>
-                                        </a>
+                                        </a> -->
                                     </div>
                                 </div>
 
                             </div>
                             <div class="col-md-6">
-                                <div class="row" ng-repeat="goops in allCategory[7]" ng-if="$index <3">
+                              <div  infinite-scroll='loadMore()' infinite-scroll-distance='3'>
+                                <div class="row" ng-repeat="goops in article" >
+                                <!-- <div class="row" ng-repeat="goops in allCategory[7]" > -->
+                                  <!-- ng-if="$index <3" -->
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                         <div class="img-hold">
                                             <a ui-sref="goops"><img alt="" ng-src={{goops.image|serverimage}} class="goops-img" src="img/post1.jpg" /></a>
@@ -39,6 +42,7 @@
                                             </p>
                                         </div>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
