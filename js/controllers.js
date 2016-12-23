@@ -18,36 +18,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             n.timestamp2 = moment(n.timestamp).toDate();
         });
         $scope.allCategory[parseInt(data.category.id)] = data.article;
-        // console.log("$scope.allCategory",$scope.allCategory[7]);
-      }
+        $scope.article=_.cloneDeep($scope.allCategory[7]);
+         $scope.article=$scope.article.splice(0,3);
+         $scope.loadMore = function() {
+          $scope.article =$scope.allCategory[7].slice(0,$scope.article.length +3);
+        }
+        }
       for (var i = 0; i < 7; i++) {
         $scope.allCategory.push([]);
         NavigationService.getCategoryArticles(i + 1, getArticles);
+      }
 
-        // console.log(getArticles,"getArticles");
-    }
-
-NavigationService.getCategoryArticles('7',function(data){
-  console.log(data.article,"data");
-    $scope.article = [];
-    $scope.article = _.cloneDeep(data.article);
-    $scope.article=$scope.article.splice(0,3);
-
-  $scope.loadMore = function() {
-    //  var last = $scope.article[$scope.article.length - 1];
-    //  console.log("last",last);
-    //  console.log("$scope.article.length",$scope.article.length);
-    //  for(var i = 1; i <= $scope.article.length; i++) {
-    //    console.log("i",i);
-    //    $scope.article.push(last + i);
-    //  }
-    //  console.log("$scope.article ",$scope.article );
-    $scope.article= _.cloneDeep(data.article);
-   };
-
-
-
-});
 
 
 

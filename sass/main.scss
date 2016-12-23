@@ -1767,6 +1767,12 @@ footer {
         color: #218dfb;
     }
 }
+.overflow{
+  height: 276px;
+overflow: scroll;
+overflow-x: hidden;
+padding: 0px 11px 0px 26px;
+}
 @import "comingsoon";
 @import "mobile";
 @import "comingSoonMobile";
