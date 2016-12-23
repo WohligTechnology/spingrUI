@@ -19,7 +19,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
         $scope.allCategory[parseInt(data.category.id)] = data.article;
         $scope.articles=_.cloneDeep($scope.allCategory[7]);
-         $scope.articles=$scope.articles.splice(0,3);
+         $scope.articles=$scope.articles.slice(0,3);
          $scope.loadMore = function() {
           $scope.articles =$scope.allCategory[7].slice(0,$scope.articles.length +3);
         }
