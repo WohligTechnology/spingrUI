@@ -18,10 +18,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             n.timestamp2 = moment(n.timestamp).toDate();
         });
         $scope.allCategory[parseInt(data.category.id)] = data.article;
-        $scope.article=_.cloneDeep($scope.allCategory[7]);
-         $scope.article=$scope.article.splice(0,3);
+        $scope.articles=_.cloneDeep($scope.allCategory[7]);
+         $scope.articles=$scope.articles.splice(0,3);
          $scope.loadMore = function() {
-          $scope.article =$scope.allCategory[7].slice(0,$scope.article.length +3);
+          $scope.articles =$scope.allCategory[7].slice(0,$scope.articles.length +3);
         }
         }
       for (var i = 0; i < 7; i++) {
