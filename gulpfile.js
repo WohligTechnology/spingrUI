@@ -12,6 +12,7 @@ var jsArray = [
   './bower_components/angular-flexslider/angular-flexslider.js',
   './bower_components/moment/min/moment.min.js',
   './bower_components/lodash/lodash.min.js',
+  './bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js',
   '//lustlielove.disqus.com/count.js" async',
 
   './js/app.js',
