@@ -128,7 +128,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, cfpL
         controller: 'LoveDetailCtrl'
     });
 
-    $urlRouterProvider.otherwise("/comingSoon");
+    $urlRouterProvider.otherwise("/home");
 
 });
 firstapp.directive('autoHeightfixed', function($compile, $parse) {
