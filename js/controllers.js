@@ -19,8 +19,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
         $scope.allCategory[parseInt(data.category.id)] = data.article;
         $scope.articles=_.cloneDeep($scope.allCategory[7]);
-         $scope.articles=$scope.articles.slice(0,3);
-         $scope.loadMore = function() {
+        $scope.articles=$scope.articles.slice(0,3);
+        $scope.category = data.catgory;
+        $scope.loadMore = function() {
           $scope.articles =$scope.allCategory[7].slice(0,$scope.articles.length +3);
         }
         }
@@ -30,15 +31,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }
 
 
-
-
-
-    $scope.mySlides = [
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-    ];
 })
 
 .controller('LoveCtrl', function($scope, TemplateService, NavigationService, $location) {
@@ -93,6 +85,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             console.log("goops");
             break;
     }
+
+    $scope.formSubmitted = false;
+    $scope.formData = {};
+    $scope.submitForm = function (formData) {
+        NavigationService.saveContact($scope.formData, function (data) {
+            if (data.value === true) {
+                $scope.formSubmitted = true;
+            }
+        });
+    };
 })
 
 .controller('ConfessionsCtrl', function($scope, TemplateService, NavigationService) {
@@ -153,6 +155,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             content: "I have just graduated and have been offered my dream job in Mumbai. But it will be moving away from my family and my boyfriend. I don’t know if i will be able to live without him.",
             ans: "Yes, of course you can enjoy intercourse with a man even after you pleasure yourself. You can masturbate by having a fantasy, touching your breasts and stroking your genitals. Do not insert objects or fingers into the vagina. Study the anatomy of the vulva and vagina. You will learn that the clitoris is the female penis, which brings about an orgasm for women when stimulated. It is situated at the apex of the vulva.Yes, of course you can enjoy intercourse with a man even after you pleasure yourself. You can masturbate by having a fantasy, touching your breasts and stroking your genitals. Do not insert objects or fingers into the vagina. Study the anatomy of the vulva and vagina. You will learn that the clitoris is the female penis, which brings about an orgasm for women when stimulated. It is situated at the apex of the vulva."
         }];
+
+
     })
     .controller('QueriesDetailCtrl', function($scope, TemplateService, NavigationService) {
         //Used to name the .html file

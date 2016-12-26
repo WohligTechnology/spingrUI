@@ -1,4 +1,4 @@
-<section class="brand-gray-bg">
+<section class="brand-gray-bg" >
     <div class="container" ng-class="catColor">
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
@@ -13,33 +13,55 @@
                             </div>
                         </div>
                         <div class="col-md-4">
+
                             <div class="content-right" ng-if="catColor=='put-me-sexpert'">
+
                                 <div class="secret brand-gray">
                                     <h5><span>ask</span> the sexpert</h5>
-                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts"></textarea>
+                                      <form name="formName" ng-submit="submitForm(formData);" ng-if="!formSubmitted">
+                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts" name="summary" ng-model="formData.qsn"></textarea>
                                     <div class="text-center">
                                         <button type="button" class="btn sexpage-btn">Submit</button>
                                     </div>
+                                      </form>
+                                </div>
+
+                                <div class="form-submission text-center" ng-if="formSubmitted">
+                                    <h3>Thank you for submitting the form!</h3>
+
                                 </div>
                             </div>
                             <div class="content-right" ng-if="catColor=='put-me-query'">
                                 <div class="secret brand-gray">
                                     <h5><span>ask the </span> love guru</h5>
-                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts"></textarea>
+                                      <form name="formName" ng-submit="submitForm(formData);" ng-if="!formSubmitted">
+                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts" name="summary" ng-model="formData.qsn"></textarea>
                                     <div class="text-center">
                                         <button type="button" class="btn query-btn">Submit</button>
+                                    </div>
+                                  </form>
+                                    <div class="form-submission text-center" ng-if="formSubmitted">
+                                        <h3>Thank you for submitting the form!</h3>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="content-right" ng-if="catColor=='put-me-confess'">
                                 <div class="secret brand-gray">
                                     <h5><span>Confess</span> your secrets</h5>
-                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts"></textarea>
+                                      <form name="formName" ng-submit="submitForm(formData);" ng-if="!formSubmitted">
+                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts" name="summary" ng-model="formData.qsn"></textarea>
                                     <div class="text-center">
                                         <button type="button" class="btn color-me btn-blue">Submit</button>
                                     </div>
+                                  </form>
+                                    <div class="form-submission text-center" ng-if="formSubmitted">
+                                        <h3>Thank you for submitting the form!</h3>
+
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

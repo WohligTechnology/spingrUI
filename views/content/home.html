@@ -18,9 +18,9 @@
                                 <div class="goops-text">
                                     <img alt="" class="goopswidht" src="img/goops-text.png" />
                                     <div class="more-buttongoops">
-                                        <!-- <a ui-sref="goops">
+                                        <a ui-sref="goops">
                                             <button class="btn btn-black btn-more" type="button">View More</button>
-                                        </a> -->
+                                        </a>
                                     </div>
                                 </div>
 
@@ -62,7 +62,7 @@
                                 <div class="slider">
                                     <div class="elements" ng-repeat="article in allCategory[4]">
                                         <!-- <h2 class="brand-blue">#51</h2> -->
-                                        <p>{{blog.title}}
+                                        <p ng-bind-html="article.title">
                                         </p>
                                         <div class="extra brand-gray-lighter-2">
                                             <button ui-sref="confessions" class="pull-right btn-null">READ MORE</button> By {{allCategory[4].author}} | {{allCategory[4].timestamp|date}}</div>
