@@ -86,12 +86,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             break;
     }
 
-    $scope.formSubmitted = false;
+    $scope.formSubmitted = true;
+    $scope.msg='';
     $scope.formData = {};
-    $scope.submitForm = function (formData) {
-        NavigationService.saveContact($scope.formData, function (data) {
+    $scope.submitForm = function (formData,categoryid) {
+  console.log("in func");
+      formData.categoryid=parseInt(categoryid);
+        NavigationService.querySubmit($scope.formData, function (data) {
+            $scope.formSubmitted = false;
             if (data.value === true) {
-                $scope.formSubmitted = true;
+                $scope.msg="Thank you for submitting the qeury!";
+                  $scope.formData = {};
+            }
+            else{
+                $scope.msg="Something went wrong!";
+                  $scope.formData = {};
             }
         });
     };
@@ -220,6 +229,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
+
+    $scope.formSubmitted = true;
+    $scope.msg='';
+    $scope.formData = {};
+    $scope.submitForm = function (formData,categoryid) {
+  console.log("in func");
+      formData.categoryid=parseInt(categoryid);
+        NavigationService.querySubmit($scope.formData, function (data) {
+            $scope.formSubmitted = false;
+            if (data.value === true) {
+                $scope.msg="Thank you for submitting the qeury!";
+                  $scope.formData = {};
+            }
+            else{
+                $scope.msg="Something went wrong!";
+                  $scope.formData = {};
+            }
+        });
+    };
 })
 
 .controller('footerCtrl', function($scope, TemplateService, NavigationService) {

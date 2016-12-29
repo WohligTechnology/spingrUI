@@ -39,6 +39,20 @@ var navigationservice = angular.module('navigationservice', [])
     sendSubsribe: function (email, callback) {
       $http.get(adminJson + 'addSubscriber?email=' + email).success(callback);
     },
+    // getSingleQuery: function (id, callback) {
+    //   $http.get(adminJson + 'getSingleQuery?id=' + id).success(callback);
+    // },
+    querySubmit:function(form,callback){
+        console.log(form);
+        $http({
+            url: adminJson + 'querySubmit',
+            method: 'POST',
+            data: {
+                "question":form.question,
+                "category":form.categoryid
+            }
+        }).success(callback);
+      },
     makeactive: function (menuname) {
       for (var i = 0; i < navigation.length; i++) {
         if (navigation[i].name == menuname) {

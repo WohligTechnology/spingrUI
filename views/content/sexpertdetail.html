@@ -1,4 +1,4 @@
-<section class="brand-gray-bg ">
+<section class="brand-gray-bg " >
     <div class="container"  ng-class="catColor">
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
@@ -32,33 +32,55 @@
                             <!-- discuss end -->
                         </div>
                         <div class="col-md-4">
-                          <div class="content-right" ng-if="catColor=='put-me-sexpert'">
-                              <div class="secret brand-gray">
-                                  <h5><span>ask</span> the sexpert</h5>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+
+                            <div class="content-right" ng-if="catColor=='put-me-sexpert'">
+
+                                <div class="secret brand-gray">
+                                    <h5><span>ask</span> the sexpert</h5>
+                                    <form ng-submit="submitForm(formData,'5')" ng-if="formSubmitted"  >
+                                <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts" name="summary" ng-model="formData.question"></textarea>
                                   <div class="text-center">
-                                      <button type="button" class="btn sexpage-btn">Submit</button>
+                                      <button type="submit"  value="Submit" class="btn query-btn">Submit</button>
                                   </div>
-                              </div>
-                          </div>
-                          <div class="content-right"  ng-if="catColor=='put-me-query'">
-                              <div class="secret brand-gray">
-                                  <h5><span>ask the </span> love guru</h5>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                                  <div class="text-center">
-                                      <button type="button" class="btn query-btn">Submit</button>
+                                </form>
+
+
+                                <div class="form-submission text-center">
+                                    <h3>{{msg}}</h3>
+  </div>
+                                </div>
+                            </div>
+                            <div class="content-right" ng-if="catColor=='put-me-query'">
+                                <div class="secret brand-gray">
+                                    <h5><span>ask the </span> love guru</h5>
+                                      <form ng-submit="submitForm(formData,'6')" ng-if="formSubmitted"  >
+                                  <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts" name="summary" ng-model="formData.question"></textarea>
+                                    <div class="text-center">
+                                        <button type="submit"  value="Submit" class="btn query-btn">Submit</button>
+                                    </div>
+                                  </form>
+                                  <div class="form-submission text-center">
+                                      <h3>{{msg}}</h3>
+
                                   </div>
-                              </div>
-                          </div>
-                          <div class="content-right" ng-if="catColor=='put-me-confess'">
-                              <div class="secret brand-gray">
-                                  <h5><span>Confess</span> your secrets</h5>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                                  <div class="text-center">
-                                      <button type="button" class="btn color-me btn-blue">Submit</button>
-                                  </div>
-                              </div>
-                          </div>
+                                </div>
+                            </div>
+                            <div class="content-right" ng-if="catColor=='put-me-confess'">
+                                <div class="secret brand-gray">
+                                    <h5><span>Confess</span> your secrets</h5>
+                                      <form ng-submit="submitForm(formData,'4')" ng-if="formSubmitted"  >
+                                    <textarea class="form-control resize Robotor" rows="5" placeholder="Enter Your Depots Thoughts" name="summary" ng-model="formData.question"></textarea>
+                                    <div class="text-center">
+                                        <button type="submit"  value="Submit" class="btn color-me btn-blue">Submit</button>
+                                    </div>
+                                  </form>
+                                    <div class="form-submission text-center">
+                                        <h3>{{msg}}</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
